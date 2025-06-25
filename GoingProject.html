@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildRite Construction | Civil Engineering Experts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <style>
+        /* ================ ONGOING PROJECTS STYLES ================ */
+        :root {
+            --primary: #2c3e50;
+            --accent: #D35400;
+            --light-accent: rgba(211, 84, 0, 0.1);
+            --text: #555;
+            --light-text: #777;
+            --light-bg: #f9f9f9;
+            --white: #fff;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --border-radius: 8px;
+        }
+
+        .projects-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 30px;
+        }
+
+        .projects-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .projects-header p {
+            color: var(--text);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            width: 0;
+            transition: width 1s ease;
+        }
+
+        .project-card:hover .progress-bar {
+            width: var(--progress);
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-info p {
+            color: var(--text);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .project-status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .project-tag {
+            background: var(--light-accent);
+            color: var(--accent);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .project-dates {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .start-date {
+            color: var(--accent);
+        }
+
+        .eta {
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+
+            .projects-header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Build<span>Rite</span></h1>
+                <p>Civil Construction Specialists</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="./index.html" class="nav-link active">Home</a></li>
+                    <li><a href="./AboutUs.html" class="nav-link">About Us</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="green-buildings.html" class="dropdown-link"><i class="fas fa-leaf"></i> Green
+                                    Buildings</a></li>
+                            <li><a href="premium-modular-villas-pods-and-farmhouses.html" class="dropdown-link"><i
+                                        class="fas fa-home"></i> Premium Modular Villas</a></li>
+                            <li><a href="civil-construction.html" class="dropdown-link"><i class="fas fa-building"></i>
+                                    Civil Construction</a></li>
+                            <li><a href="interior-and-exterior.html" class="dropdown-link"><i
+                                        class="fas fa-paint-roller"></i> Interior & Exterior</a></li>
+                            <li><a href="general-contracting-for-all-segments.html" class="dropdown-link"><i
+                                        class="fas fa-hard-hat"></i> General Contracting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="CompleteProject.html" class="dropdown-link"><i class="fas fa-check-circle"></i>
+                                    Completed</a></li>
+                            <li><a href="GoingProject.html" class="dropdown-link"><i class="fas fa-tasks"></i>
+                                    Ongoing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
+                                    Careers</a></li>
+                            <li><a href="./blog.html" class="dropdown-link"><i class="fas fa-blog"></i> Blog</a></li>
+                              <li><a href="./vision.html" class="dropdown-link"><i class="fas fa-quote-left"></i>
+                                    Mission & Vision</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html" class="nav-link contact-btn">Get a Quote</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="./index.html" class="mobile-nav-link active">Home</a></li>
+            <li><a href="./AboutUs.html" class="mobile-nav-link">About Us</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Services <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="green-buildings.html" class="mobile-dropdown-link">Green Buildings</a></li>
+                    <li><a href="premium-modular-villas-pods-and-farmhouses.html" class="mobile-dropdown-link">Premium
+                            Modular Villas</a></li>
+                    <li><a href="civil-construction.html" class="mobile-dropdown-link">Civil Construction</a></li>
+                    <li><a href="interior-and-exterior.html" class="mobile-dropdown-link">Interior & Exterior</a></li>
+                    <li><a href="general-contracting-for-all-segments.html" class="mobile-dropdown-link">General
+                            Contracting</a></li>
+                </ul>
+            </li>
+            <li><a href="./gallery.html" class="mobile-nav-link">Gallery</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Projects <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
+                    <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="./careers.html" class="mobile-dropdown-link">Careers</a></li>
+                    <!-- <li><a href="./testimonials.html" class="mobile-dropdown-link">Testimonials</a></li> -->
+                    <li><a href="./blog.html" class="mobile-dropdown-link">Blog</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html" class="mobile-nav-link contact-btn"
+                    style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
+        </ul>
+    </div>
+
+
+
+    
+
+    <div class="projects-header">
+        <h1>Our Ongoing Projects</h1>
+        <p>Discover our current projects that are transforming the construction landscape with innovative green building
+            techniques.</p>
+    </div>
+
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card" style="--progress: 65%">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Urban Green Towers">
+                <div class="project-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <span class="project-status">In Progress</span>
+            <div class="project-info">
+                <h3>Urban Green Towers</h3>
+                <p>High-rise residential complex featuring vertical gardens, solar panel integration, and smart water
+                    management systems.</p>
+
+                <div class="project-dates">
+                    <span class="start-date">Started: Jan 2023</span>
+                    <span class="eta">ETA: Dec 2024</span>
+                </div>
+
+                <div class="project-meta">
+                    <span>65% Complete</span>
+                    <span>Mumbai, India</span>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Residential</span>
+                    <span class="project-tag">Hybrid Structure</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" style="--progress: 40%">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Eco Corporate Park">
+                <div class="project-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <span class="project-status">In Progress</span>
+            <div class="project-info">
+                <h3>Eco Corporate Park</h3>
+                <p>Commercial complex with net-zero energy design, EV charging stations, and intelligent building
+                    management systems.</p>
+
+                <div class="project-dates">
+                    <span class="start-date">Started: Mar 2023</span>
+                    <span class="eta">ETA: Jun 2024</span>
+                </div>
+
+                <div class="project-meta">
+                    <span>40% Complete</span>
+                    <span>Bangalore, India</span>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Commercial</span>
+                    <span class="project-tag">Steel Structure</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" style="--progress: 80%">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Sustainable University Campus">
+                <div class="project-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <span class="project-status">In Progress</span>
+            <div class="project-info">
+                <h3>Sustainable University Campus</h3>
+                <p>Educational facility with passive cooling design, renewable energy systems, and sustainable material
+                    usage throughout.</p>
+
+                <div class="project-dates">
+                    <span class="start-date">Started: Aug 2022</span>
+                    <span class="eta">ETA: Oct 2023</span>
+                </div>
+
+                <div class="project-meta">
+                    <span>80% Complete</span>
+                    <span>Hyderabad, India</span>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Institutional</span>
+                    <span class="project-tag">Light Gauge Steel</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" style="--progress: 25%">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Green Healthcare Center">
+                <div class="project-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <span class="project-status">In Progress</span>
+            <div class="project-info">
+                <h3>Green Healthcare Center</h3>
+                <p>Medical facility designed with biophilic elements, advanced air purification, and energy-efficient
+                    systems.</p>
+
+                <div class="project-dates">
+                    <span class="start-date">Started: May 2023</span>
+                    <span class="eta">ETA: Dec 2024</span>
+                </div>
+
+                <div class="project-meta">
+                    <span>25% Complete</span>
+                    <span>Delhi, India</span>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Healthcare</span>
+                    <span class="project-tag">Drywall Systems</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" style="--progress: 55%">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    alt="Eco Retail Hub">
+                <div class="project-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <span class="project-status">In Progress</span>
+            <div class="project-info">
+                <h3>Eco Retail Hub</h3>
+                <p>Shopping complex featuring natural lighting, recycled materials, and smart energy monitoring systems.
+                </p>
+
+                <div class="project-dates">
+                    <span class="start-date">Started: Feb 2023</span>
+                    <span class="eta">ETA: Aug 2024</span>
+                </div>
+
+                <div class="project-meta">
+                    <span>55% Complete</span>
+                    <span>Chennai, India</span>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Commercial</span>
+                    <span class="project-tag">Hot Rolled Steel</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" style="--progress: 70%">
+            <div class="project-image">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80"
+                    alt="Sustainable Resort">
+                <div class="project-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <span class="project-status">In Progress</span>
+            <div class="project-info">
+                <h3>Sustainable Resort</h3>
+                <p>Luxury eco-resort with zero-waste operations, renewable energy systems, and sustainable water
+                    management.</p>
+
+                <div class="project-dates">
+                    <span class="start-date">Started: Oct 2022</span>
+                    <span class="eta">ETA: May 2024</span>
+                </div>
+
+                <div class="project-meta">
+                    <span>70% Complete</span>
+                    <span>Goa, India</span>
+                </div>
+
+                <div class="project-tags">
+                    <span class="project-tag">Hospitality</span>
+                    <span class="project-tag">Hybrid Structure</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Build<span>Rite</span></h3>
+                        <p>Civil Construction Specialists</p>
+                    </div>
+                    <p>Building excellence through innovation, quality, and integrity since 1995. Your trusted partner
+                        for all civil construction needs.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Building Construction</a></li>
+                        <li><a href="#services">Road Works</a></li>
+                        <li><a href="#services">Structural Design</a></li>
+                        <li><a href="#services">Site Supervision</a></li>
+                        <li><a href="#services">Utilities Installation</a></li>
+                    </ul>
+                </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+    <div class="footer-widget__column footer-widget__contact">
+        <div class="footer-widget__title-box">
+            <h3 class="footer-widget__title">Contact</h3>
+        </div><br>
+        <p class="footer-widget__contact-text">
+            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
+            Taramandal, Gorakhpur, 273017
+        </p><br>
+        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
+            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
+            </li>
+            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
+            </li>
+            <li style="display: flex; align-items: center;">
+                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="#">Korearch Infrastructure</a></span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Gyanvi Digital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Modal for Job Applications -->
+    <div class="modal" id="applicationModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Apply for Position</h3>
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="applicantName">Full Name</label>
+                    <input type="text" id="applicantName" name="applicantName" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantEmail">Email</label>
+                    <input type="email" id="applicantEmail" name="applicantEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantPhone">Phone</label>
+                    <input type="tel" id="applicantPhone" name="applicantPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantPosition">Position Applying For</label>
+                    <input type="text" id="applicantPosition" name="applicantPosition" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="applicantResume">Upload Resume (PDF)</label>
+                    <input type="file" id="applicantResume" name="applicantResume" accept=".pdf" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantCover">Cover Letter</label>
+                    <textarea id="applicantCover" name="applicantCover" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <p>Thank you for your message! We'll get back to you soon.</p>
+    </div>
+    <script>
+        // Animate progress bars on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const progressBars = document.querySelectorAll('.progress-bar');
+
+            progressBars.forEach(bar => {
+                const card = bar.closest('.project-card');
+                const progress = card.style.getPropertyValue('--progress');
+                bar.style.width = progress;
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>

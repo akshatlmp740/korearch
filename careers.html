@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildRite Construction | Civil Engineering Experts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <style>
+        /* Careers Section Styles */
+        .careers.section {
+            padding: 20px 0;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+
+        .careers .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .careers .section-header h2 {
+            font-size: 2.5rem;
+            color: #2a5d8a;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .careers .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .careers-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .careers-text h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .careers-text h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #e67e22;
+        }
+
+        .careers-text p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .benefits {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 30px;
+        }
+
+        .benefits h4 {
+            font-size: 1.3rem;
+            color: #2a5d8a;
+            margin-bottom: 15px;
+        }
+
+        .benefits ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .benefits li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .benefits li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #e67e22;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .careers-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .careers-form h3 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .job-openings {
+            display: grid;
+            gap: 20px;
+        }
+
+        .job-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .job-item:hover {
+            border-color: #2a5d8a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(42, 93, 138, 0.1);
+        }
+
+        .job-item h4 {
+            font-size: 1.2rem;
+            color: #2a5d8a;
+            margin-bottom: 8px;
+        }
+
+        .job-item p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .careers-content {
+                grid-template-columns: 1fr;
+            }
+
+            .careers-text,
+            .careers-form {
+                width: 100%;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .careers .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .careers-text h3,
+            .careers-form h3 {
+                font-size: 1.5rem;
+            }
+
+            .job-item {
+                padding: 15px;
+            }
+        }
+    </style>
+
+    <!-- Add this right before the closing </head> tag -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Build<span>Rite</span></h1>
+                <p>Civil Construction Specialists</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="./index.html" class="nav-link active">Home</a></li>
+                    <li><a href="./AboutUs.html" class="nav-link">About Us</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="green-buildings.html" class="dropdown-link"><i class="fas fa-leaf"></i> Green
+                                    Buildings</a></li>
+                            <li><a href="premium-modular-villas-pods-and-farmhouses.html" class="dropdown-link"><i
+                                        class="fas fa-home"></i> Premium Modular Villas</a></li>
+                            <li><a href="civil-construction.html" class="dropdown-link"><i class="fas fa-building"></i>
+                                    Civil Construction</a></li>
+                            <li><a href="interior-and-exterior.html" class="dropdown-link"><i
+                                        class="fas fa-paint-roller"></i> Interior & Exterior</a></li>
+                            <li><a href="general-contracting-for-all-segments.html" class="dropdown-link"><i
+                                        class="fas fa-hard-hat"></i> General Contracting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="CompleteProject.html" class="dropdown-link"><i class="fas fa-check-circle"></i>
+                                    Completed</a></li>
+                            <li><a href="GoingProject.html" class="dropdown-link"><i class="fas fa-tasks"></i>
+                                    Ongoing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
+                                    Careers</a></li>
+                            <li><a href="./blog.html" class="dropdown-link"><i class="fas fa-blog"></i> Blog</a></li>
+                              <li><a href="./vision.html" class="dropdown-link"><i class="fas fa-quote-left"></i>
+                                    Mission & Vision</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html" class="nav-link contact-btn">Get a Quote</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="./index.html" class="mobile-nav-link active">Home</a></li>
+            <li><a href="./AboutUs.html" class="mobile-nav-link">About Us</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Services <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="green-buildings.html" class="mobile-dropdown-link">Green Buildings</a></li>
+                    <li><a href="premium-modular-villas-pods-and-farmhouses.html" class="mobile-dropdown-link">Premium
+                            Modular Villas</a></li>
+                    <li><a href="civil-construction.html" class="mobile-dropdown-link">Civil Construction</a></li>
+                    <li><a href="interior-and-exterior.html" class="mobile-dropdown-link">Interior & Exterior</a></li>
+                    <li><a href="general-contracting-for-all-segments.html" class="mobile-dropdown-link">General
+                            Contracting</a></li>
+                </ul>
+            </li>
+            <li><a href="./gallery.html" class="mobile-nav-link">Gallery</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Projects <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
+                    <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="./careers.html" class="mobile-dropdown-link">Careers</a></li>
+                    <!-- <li><a href="./testimonials.html" class="mobile-dropdown-link">Testimonials</a></li> -->
+                    <li><a href="./blog.html" class="mobile-dropdown-link">Blog</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html" class="mobile-nav-link contact-btn"
+                    style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!-- Careers Section -->
+    <section id="careers" class="careers section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Careers at BuildRite</h2>
+                <p>Join our team of construction professionals</p>
+            </div>
+            <div class="careers-content">
+                <div class="careers-text">
+                    <h3>Build Your Future With Us</h3>
+                    <p>At BuildRite Construction, we believe our people are our greatest asset. We offer competitive
+                        salaries, comprehensive benefits, and opportunities for professional growth in a dynamic work
+                        environment.</p>
+                    <p>We're always looking for talented individuals to join our team in various roles including project
+                        managers, site engineers, surveyors, and skilled tradespeople.</p>
+                    <div class="benefits">
+                        <h4>Employee Benefits:</h4>
+                        <ul>
+                            <li>Competitive wages and bonuses</li>
+                            <li>Health, dental, and vision insurance</li>
+                            <li>Retirement savings plan</li>
+                            <li>Professional development opportunities</li>
+                            <li>Safe and inclusive work environment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="careers-form">
+                    <h3>Current Openings</h3>
+                    <div class="job-openings">
+                        <div class="job-item">
+                            <h4>Project Manager</h4>
+                            <p>5+ years experience in construction management</p>
+                            <button class="btn btn-secondary apply-btn">Apply Now</button>
+                        </div>
+                        <div class="job-item">
+                            <h4>Civil Engineer</h4>
+                            <p>Bachelor's degree in Civil Engineering, PE license preferred</p>
+                            <button class="btn btn-secondary apply-btn">Apply Now</button>
+                        </div>
+                        <div class="job-item">
+                            <h4>Construction Supervisor</h4>
+                            <p>3+ years experience in site supervision</p>
+                            <button class="btn btn-secondary apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Build<span>Rite</span></h3>
+                        <p>Civil Construction Specialists</p>
+                    </div>
+                    <p>Building excellence through innovation, quality, and integrity since 1995. Your trusted partner
+                        for all civil construction needs.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Building Construction</a></li>
+                        <li><a href="#services">Road Works</a></li>
+                        <li><a href="#services">Structural Design</a></li>
+                        <li><a href="#services">Site Supervision</a></li>
+                        <li><a href="#services">Utilities Installation</a></li>
+                    </ul>
+                </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+    <div class="footer-widget__column footer-widget__contact">
+        <div class="footer-widget__title-box">
+            <h3 class="footer-widget__title">Contact</h3>
+        </div><br>
+        <p class="footer-widget__contact-text">
+            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
+            Taramandal, Gorakhpur, 273017
+        </p><br>
+        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
+            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
+            </li>
+            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
+            </li>
+            <li style="display: flex; align-items: center;">
+                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="#">Korearch Infrastructure</a></span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Gyanvi Digital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Modal for Job Applications -->
+    <div class="modal" id="applicationModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Apply for Position</h3>
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="applicantName">Full Name</label>
+                    <input type="text" id="applicantName" name="applicantName" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantEmail">Email</label>
+                    <input type="email" id="applicantEmail" name="applicantEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantPhone">Phone</label>
+                    <input type="tel" id="applicantPhone" name="applicantPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantPosition">Position Applying For</label>
+                    <input type="text" id="applicantPosition" name="applicantPosition" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="applicantResume">Upload Resume (PDF)</label>
+                    <input type="file" id="applicantResume" name="applicantResume" accept=".pdf" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantCover">Cover Letter</label>
+                    <textarea id="applicantCover" name="applicantCover" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <p>Thank you for your message! We'll get back to you soon.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>

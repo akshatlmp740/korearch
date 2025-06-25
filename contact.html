@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildRite Construction | Civil Engineering Experts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+    <style>
+    /* ================ BASE STYLES ================ */
+    :root {
+        --primary: #2c3e50;
+        --accent: #D35400;
+        --light-accent: rgba(211, 84, 0, 0.1);
+        --text: #555;
+        --light-text: #777;
+        --light-bg: #f9f9f9;
+        --white: #fff;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+        --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --border-radius: 8px;
+    }
+
+    /* ================ PAGE HEADER ================ */
+    #pageheader {
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 4rem;
+    }
+
+    #pageheader-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.7);
+    }
+
+    #pageheader-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(44, 62, 80, 0.7) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 5%;
+        color: var(--white);
+    }
+
+    #pageheader-content {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        animation: fadeInUp 0.8s ease-out;
+    }
+
+    #pageheader h1 {
+        margin: 0 0 1rem 0;
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #pageheader-breadcrumb {
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    #pageheader-breadcrumb a {
+        color: var(--white);
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        position: relative;
+    }
+
+    #pageheader-breadcrumb a:hover {
+        opacity: 0.9;
+    }
+
+    #pageheader-breadcrumb a:hover::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: var(--white);
+    }
+
+    #pageheader-breadcrumb span.separator {
+        margin: 0 0.75rem;
+        opacity: 0.7;
+    }
+
+    /* ================ CONTACT SECTION ================ */
+    #contact {
+        /* padding: 4rem 0; */
+        position: relative;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 0.75rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-header h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--accent);
+    }
+
+    .section-header p {
+        color: var(--text);
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 3rem;
+        margin: 3rem 0;
+    }
+
+    .contact-cards {
+        display: grid;
+        gap: 1.75rem;
+    }
+
+    .contact-card {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        padding: 2.25rem;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+        border-top: 3px solid var(--accent);
+    }
+
+    .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .contact-card h4 {
+        font-size: 1.3rem;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .contact-card h4 i {
+        margin-right: 12px;
+        color: var(--accent);
+        font-size: 1.4rem;
+    }
+
+    .contact-card p {
+        color: var(--text);
+        line-height: 1.7;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1.25rem;
+    }
+
+    .contact-info-item i {
+        color: var(--accent);
+        margin-right: 12px;
+        margin-top: 4px;
+        min-width: 20px;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .contact-info-item div p {
+        margin-bottom: 0.25rem;
+    }
+
+    .contact-info-item strong {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    .small-text {
+        font-size: 0.85rem;
+        color: var(--light-text);
+        margin-top: 0.5rem;
+        line-height: 1.5;
+    }
+
+    /* ================ CONTACT FORM ================ */
+    .contact-form {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        padding: 2.5rem;
+        box-shadow: var(--shadow-sm);
+        height: fit-content;
+        position: sticky;
+        top: 2rem;
+    }
+
+    .contact-form h3 {
+        font-size: 1.5rem;
+        color: var(--primary);
+        margin-bottom: 1.75rem;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .contact-form h3 i {
+        margin-right: 12px;
+        color: var(--accent);
+        font-size: 1.3rem;
+    }
+
+    #contactForm {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-group label i {
+        margin-right: 8px;
+        color: var(--accent);
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.85rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: var(--border-radius);
+        font-size: 0.95rem;
+        transition: var(--transition);
+        background: var(--light-bg);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--light-accent);
+    }
+
+    .form-group textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.9rem 2rem;
+        background: var(--accent);
+        color: var(--white);
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .btn:hover {
+        background: #c04b00;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .btn i {
+        margin-right: 8px;
+        font-size: 0.9rem;
+    }
+
+    /* ================ MAP SECTION ================ */
+    .map-container {
+        height: 450px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        margin-top: 4rem;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        filter: grayscale(20%) contrast(1.1);
+    }
+
+    /* ================ ANIMATIONS ================ */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ================ RESPONSIVE STYLES ================ */
+    @media (max-width: 1200px) {
+        .contact-content {
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 992px) {
+        #pageheader {
+            height: 350px;
+        }
+        
+        #pageheader h1 {
+            font-size: 2.5rem;
+        }
+        
+        .contact-content {
+            grid-template-columns: 1fr;
+        }
+        
+        .contact-form {
+            position: static;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #pageheader {
+            height: 300px;
+            margin-bottom: 3rem;
+        }
+        
+        #pageheader h1 {
+            font-size: 2.2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+        }
+        
+        .contact-card,
+        .contact-form {
+            padding: 1.75rem;
+        }
+        
+        .map-container {
+            height: 350px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        #pageheader {
+            height: 250px;
+        }
+        
+        #pageheader h1 {
+            font-size: 1.8rem;
+        }
+        
+        #pageheader-content {
+            padding: 1.5rem;
+        }
+        
+        #pageheader-breadcrumb {
+            font-size: 0.9rem;
+        }
+        
+        .section-header h2 {
+            font-size: 1.8rem;
+        }
+        
+        .section-header p {
+            font-size: 1rem;
+        }
+        
+        .contact-card h4,
+        .contact-form h3 {
+            font-size: 1.2rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Build<span>Rite</span></h1>
+                <p>Civil Construction Specialists</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="./index.html" class="nav-link active">Home</a></li>
+                    <li><a href="./AboutUs.html" class="nav-link">About Us</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="green-buildings.html" class="dropdown-link"><i class="fas fa-leaf"></i> Green
+                                    Buildings</a></li>
+                            <li><a href="premium-modular-villas-pods-and-farmhouses.html" class="dropdown-link"><i
+                                        class="fas fa-home"></i> Premium Modular Villas</a></li>
+                            <li><a href="civil-construction.html" class="dropdown-link"><i class="fas fa-building"></i>
+                                    Civil Construction</a></li>
+                            <li><a href="interior-and-exterior.html" class="dropdown-link"><i
+                                        class="fas fa-paint-roller"></i> Interior & Exterior</a></li>
+                            <li><a href="general-contracting-for-all-segments.html" class="dropdown-link"><i
+                                        class="fas fa-hard-hat"></i> General Contracting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="CompleteProject.html" class="dropdown-link"><i class="fas fa-check-circle"></i>
+                                    Completed</a></li>
+                            <li><a href="GoingProject.html" class="dropdown-link"><i class="fas fa-tasks"></i>
+                                    Ongoing</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link more-link">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
+                                    Careers</a></li>
+                            <li><a href="./blog.html" class="dropdown-link"><i class="fas fa-blog"></i> Blog</a></li>
+                              <li><a href="./vision.html" class="dropdown-link"><i class="fas fa-quote-left"></i>
+                                    Mission & Vision</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html" class="nav-link contact-btn">Get a Quote</a></li>
+                </ul>
+                <div class="mobile-menu-btn" id="mobileMenuBtn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-list">
+            <li><a href="./index.html" class="mobile-nav-link active">Home</a></li>
+            <li><a href="./AboutUs.html" class="mobile-nav-link">About Us</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Services <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="green-buildings.html" class="mobile-dropdown-link">Green Buildings</a></li>
+                    <li><a href="premium-modular-villas-pods-and-farmhouses.html" class="mobile-dropdown-link">Premium
+                            Modular Villas</a></li>
+                    <li><a href="civil-construction.html" class="mobile-dropdown-link">Civil Construction</a></li>
+                    <li><a href="interior-and-exterior.html" class="mobile-dropdown-link">Interior & Exterior</a></li>
+                    <li><a href="general-contracting-for-all-segments.html" class="mobile-dropdown-link">General
+                            Contracting</a></li>
+                </ul>
+            </li>
+            <li><a href="./gallery.html" class="mobile-nav-link">Gallery</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Projects <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
+                    <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-dropdown-container">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="./careers.html" class="mobile-dropdown-link">Careers</a></li>
+                    <!-- <li><a href="./testimonials.html" class="mobile-dropdown-link">Testimonials</a></li> -->
+                    <li><a href="./blog.html" class="mobile-dropdown-link">Blog</a></li>
+                </ul>
+            </li>
+            <li><a href="./contact.html" class="mobile-nav-link contact-btn"
+                    style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
+        </ul>
+    </div>
+
+
+    <div id="pageheader">
+        <img id="pageheader-image"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+            alt="Premium Modular Villas,Pods and Farmhouses">
+        <div id="pageheader-overlay">
+            <div id="pageheader-content">
+                <h1>Contact Us</h1>
+                <nav id="pageheader-breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="separator">/</span>
+                    <span>Contact</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="contact" class="contact section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>Have questions about our services or want to discuss a project? Reach out to our team for expert guidance and support.</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-cards">
+                <!-- Office Address Card -->
+                <div class="contact-card">
+                    <h4><i class="fas fa-building"></i> Office Address</h4>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>A 12, Budha Vihar, Part-A</p>
+                            <p>Near Rajshree Hospital</p>
+                            <p>Opposite Sales Tax Office</p>
+                            <p>Taramandal, Gorakhpur, 273017</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p><strong>Working Hours:</strong></p>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regional Office Card -->
+                <div class="contact-card">
+                    <h4><i class="fas fa-map-marked-alt"></i> Regional Office</h4>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>Korearch Infrastructure Pvt Ltd.</p>
+                            <p>Awfis Spaces, 2nd Floor</p>
+                            <p>Vamsiram Jyothi Granules</p>
+                            <p>Botanical Garden Road</p>
+                            <p>Kondapur, Hyderabad</p>
+                            <p>Telangana - 500084</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info Card -->
+                <div class="contact-card">
+                    <h4><i class="fas fa-headset"></i> Contact Information</h4>
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>info@korearchinfra.com</p>
+                            <p class="small-text">Email us anytime for any kind of query</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <p>(+91) 882-622-4808</p>
+                            <p class="small-text">Call us for any query</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <p>(+91) 987-654-3210</p>
+                            <p class="small-text">Alternate contact number</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3><i class="fas fa-paper-plane"></i> Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="service"><i class="fas fa-tools"></i> Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="building">Building Construction</option>
+                            <option value="road">Road Works</option>
+                            <option value="design">Structural Design</option>
+                            <option value="supervision">Site Supervision</option>
+                            <option value="utilities">Utilities Installation</option>
+                            <option value="renovation">Renovation & Restoration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment-alt"></i> Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project"></textarea>
+                    </div>
+                    <button type="submit" class="btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Maps Section -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.102370726461!2d83.36788831504396!3d26.76077308318795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991446a0c332489%3A0x5a1e5e5f5e5e5f5e!2sRajshree%20Hospital!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <h3>Build<span>Rite</span></h3>
+                        <p>Civil Construction Specialists</p>
+                    </div>
+                    <p>Building excellence through innovation, quality, and integrity since 1995. Your trusted partner
+                        for all civil construction needs.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Building Construction</a></li>
+                        <li><a href="#services">Road Works</a></li>
+                        <li><a href="#services">Structural Design</a></li>
+                        <li><a href="#services">Site Supervision</a></li>
+                        <li><a href="#services">Utilities Installation</a></li>
+                    </ul>
+                </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+    <div class="footer-widget__column footer-widget__contact">
+        <div class="footer-widget__title-box">
+            <h3 class="footer-widget__title">Contact</h3>
+        </div><br>
+        <p class="footer-widget__contact-text">
+            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
+            Taramandal, Gorakhpur, 273017
+        </p><br>
+        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
+            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
+            </li>
+            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
+            </li>
+            <li style="display: flex; align-items: center;">
+                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                <span style="margin-left: 10px;"><a href="#">Korearch Infrastructure</a></span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Gyanvi Digital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">↑</button>
+
+    <!-- Modal for Job Applications -->
+    <div class="modal" id="applicationModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Apply for Position</h3>
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="applicantName">Full Name</label>
+                    <input type="text" id="applicantName" name="applicantName" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantEmail">Email</label>
+                    <input type="email" id="applicantEmail" name="applicantEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantPhone">Phone</label>
+                    <input type="tel" id="applicantPhone" name="applicantPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantPosition">Position Applying For</label>
+                    <input type="text" id="applicantPosition" name="applicantPosition" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="applicantResume">Upload Resume (PDF)</label>
+                    <input type="file" id="applicantResume" name="applicantResume" accept=".pdf" required>
+                </div>
+                <div class="form-group">
+                    <label for="applicantCover">Cover Letter</label>
+                    <textarea id="applicantCover" name="applicantCover" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <p>Thank you for your message! We'll get back to you soon.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
