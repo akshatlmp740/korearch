@@ -14,13 +14,21 @@
 
 
 <body>
+    <a href="#" class="tel_a" style="right: 21px; bottom: 105px; background-color: #da8953;" target="_blank"
+        rel="noreferrer noopener">
+        <i class="fa fa-envelope"></i>
+    </a>
+    <a href="#" class="whatsapp_a" style="right: 21px; bottom: 30px; background-color: #25D366;" target="_blank"
+        rel="noreferrer noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     <!-- Header with Navigation -->
     <header class="header" id="header">
         <div class="container">
             <div class="logo">
-                 <h1>Kore<span>Arch</span></h1>
-                <H5>INFRASTRUCTURE</H5>
-            </div>
+  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+</div>
+
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="./index.html" class="nav-link">Home</a></li>
@@ -48,6 +56,8 @@
                                     Completed</a></li>
                             <li><a href="GoingProject.html" class="dropdown-link"><i class="fas fa-tasks"></i>
                                     Ongoing</a></li>
+                            <li><a href="all-projects.html" class="dropdown-link"><i class="fas fa-th-list"></i>
+                                    All Projects</a></li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
@@ -56,7 +66,10 @@
                         <ul class="dropdown-menu">
                             <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
                                     Careers</a></li>
-                            <li><a href="./blog.html" class="dropdown-link"><i class="fas fa-blog"></i> Blog</a></li>
+                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
+                                    Certification</a></li>
+                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
+                                    Vendor Registration</a></li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" class="nav-link contact-btn">Get a Quote</a></li>
@@ -95,16 +108,20 @@
                 <ul class="mobile-dropdown-menu">
                     <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
                     <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
+                     <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
                 </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-dropdown-container">
                 <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
-                <ul class="mobile-dropdown-menu">
-                    <li><a href="./careers.html" class="mobile-dropdown-link">Careers</a></li>
-                    <!-- <li><a href="./testimonials.html" class="mobile-dropdown-link">Testimonials</a></li> -->
-                    <li><a href="./blog.html" class="mobile-dropdown-link">Blog</a></li>
-                </ul>
+                <ul class="dropdown-menu">
+                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
+                                    Careers</a></li>
+                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
+                                    Certification</a></li>
+                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
+                                    Vendor Registration</a></li>
+                        </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link contact-btn"
                     style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
@@ -167,7 +184,59 @@
     </section>
 
     <div class="accordion">
-        <!-- Our Expertise Section -->
+        <!--Mission & visions Section -->
+
+        <div class="accordion-section">
+            <div class="accordion-header" onclick="toggleSection(this)">
+                <p>Mission & visions</p>
+                <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner" style="display: flex; gap: 20px; width: 100%;">
+                    <div class="mission" style="width: 50%; height: 486px;">
+                        <p style="font-weight: 700;  text-align: center; font-size: 22px;"><u>Mission</u></p>
+                        <p style="height: 260px;">
+                            <i class="fas fa-medal" style="color: #e67e22; margin-right: 8px;"></i>
+                            To deliver proven premium quality work and modern intelligent solutions to buildings and
+                            structural steel for the infrastructure industry by utilizing creative engineering and the
+                            latest technologies. We will strive to implement a long terms relationship with our clients,
+                            based on safety, quality, timely service, and an anticipation of their needs. To help
+                            fulfill this mission, we will treat all employees fairly and involve them in the quality
+                            improvement process to ensure responsiveness and cost-effective work execution.
+                        </p>
+
+                        <div class="highlight-box">
+                            <p>
+                                <i class="fas fa-bullseye" style="color: #e74c3c; margin-right: 8px;"></i>
+                                We are dedicated to offering our customers timely and cost-effective solutions. We have
+                                a creative and progressive vision for the future. Our core principle is to provide
+                                outstanding service that will never alter.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="vision" style="width: 50%;">
+                        <p style="font-weight: 700;  text-align: center; font-size: 22px;"><u>Vision</u></p>
+                        <p style="height: 260px;">
+                            <i class="fas fa-medal" style="color: #e67e22; margin-right: 8px;"></i>
+                            With an unwavering commitment to innovation, sustainability, and superior
+                            craftsmanship, Korearch Infrastructure is shaping the future of construction across
+                            Pan India. Our mission is to create iconic, resilient, and forward-thinking
+                            infrastructure that not only meets but exceeds industry expectations.
+                        </p>
+
+                        <div class="highlight-box">
+                            <p>
+                                <i class="fas fa-bullseye" style="color: #e74c3c; margin-right: 8px;"></i>
+                                We are dedicated to constructing spaces that define modern living, enhance commercial
+                                growth, and support industrial expansion with sustainable, high-performance
+                                solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="accordion-section">
             <div class="accordion-header" onclick="toggleSection(this)">
                 <p>Our Expertise</p>
@@ -257,39 +326,6 @@
             </div>
         </div>
 
-        <!-- Why Choose Us Section -->
-        <div class="accordion-section">
-            <div class="accordion-header" onclick="toggleSection(this)">
-                <p>Why Choose Korearch Infrastructure?</p>
-                <i class="fas fa-chevron-down accordion-icon"></i>
-            </div>
-            <div class="accordion-content">
-                <div class="accordion-content-inner">
-                    <ul class="feature-list">
-                        <li>
-                            <strong>Industry-Leading Expertise</strong> – A legacy of engineering
-                            excellence with a future-driven vision.
-                        </li>
-                        <li>
-                            <strong>End-to-End Project Management</strong> – Comprehensive solutions, from
-                            conceptualization to final execution.
-                        </li>
-                        <li>
-                            <strong>Advanced Construction Technologies</strong> – Cutting-edge
-                            methodologies for sustainable, high-performance structures.
-                        </li>
-                        <li>
-                            <strong>Sustainability & Resource Optimization</strong> – Environmentally
-                            responsible practices ensuring minimal waste and maximum efficiency.
-                        </li>
-                        <li>
-                            <strong>Precision & Timely Execution</strong> – Delivering superior-quality
-                            projects within stipulated timelines.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
         <!-- Legacy Statement Section -->
         <div class="accordion-section">
@@ -323,470 +359,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Mission & Vision Section Start -->
-<section class="mission-vision-section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Our Mission & Vision</h2>
-      <h3>Guiding every brick we lay and every innovation we build</h3>
+
     </div>
 
-    <div class="mv-grid">
-      <!-- Mission -->
-       <style>#btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #2a5d8a;
-            color:white;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-        
-        #btn:hover {
-            background: #d1711e;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }</style>
-      <div class="mv-card">
-        <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
-        <h3>Our Mission</h3>
-       <p>Building excellence through innovation, quality, and unwavering commitment to our clients and communities
-            </p>
-            <h2>Building the Future</h2>
-            <p>At BuildRite Construction, we don't just construct buildings - we create lasting value for our
-                    clients and communities</p>
-                    <h3>Our Purpose</h3>
-                    <p>BuildRite Construction exists to transform visions into reality through exceptional
-                        craftsmanship, innovative solutions, and sustainable practices. We are committed to building
-                        structures that stand the test of time while positively impacting the communities we serve.</p>
-                    <p>Our mission guides every project we undertake, from initial concept to final completion. We
-                        measure our success not just by the buildings we deliver, but by the relationships we build and
-                        the positive change we create.</p>
-                    <p>Through our work, we aim to set new standards in the construction industry while maintaining our
-                        core values of integrity, excellence, and social responsibility.</p>
-                        <img style=" width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                        alt="BuildRite Construction Team">
-                           <!-- <h2>Our Core Values</h2>
-                <p>The principles that guide every decision we make and every project we undertake</p>
-                <h4>Quality Excellence</h4>
-                    <p>We never compromise on quality. Every detail matters, and we hold ourselves to the highest
-                        standards of craftsmanship and materials.</p>
-                         <h4>Integrity</h4>
-                    <p>We do what's right, even when no one is watching. Honesty and transparency form the foundation of
-                        all our relationships.</p>
-                         <h4>Innovation</h4>
-                    <p>We embrace new technologies and methods that improve efficiency, sustainability, and the overall
-                        quality of our work.</p>
-                        <h4>Collaboration</h4>
-                    <p>We believe the best results come from teamwork - with our clients, partners, and within our own
-                        organization.</p>
-                         <h4>Sustainability</h4>
-                    <p>We're committed to environmentally responsible practices that reduce our ecological footprint and
-                        create healthier spaces.</p>
-                        <h4>Safety First</h4>
-                    <p>The well-being of our team, clients, and community is our top priority on every job site.</p> -->
-                       <h2>Our Commitment</h2>
-                <p>What sets BuildRite apart in the construction industry</p>
-                  <h3>Building Beyond Structures</h3>
-                    <p>We're committed to more than just completing projects - we're dedicated to creating lasting
-                        value. Our approach combines technical expertise with a deep understanding of our clients' needs
-                        and aspirations.</p>
-                    <p>From the initial planning stages through final completion, we maintain open communication and
-                        transparency. Our team brings together decades of experience with fresh perspectives to deliver
-                        exceptional results.</p>
-                    <p>We stand behind our work with comprehensive warranties and ongoing support, because our
-                        relationship with clients doesn't end when construction is complete.</p>
-                    <a href="contact.html" id="btn">Get in Touch</a>
-                     <img style=" width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);" src="https://media.istockphoto.com/id/1334275012/photo/engineer-designer-and-architect-people-shaking-hands-in-the-office-for-building-agreement-of.jpg?s=2048x2048&w=is&k=20&c=qsZyfssN_Z-HP0HhNw_wcBZAlKuDFvqE2uMLcN-RuNM="
-                        alt="BuildRite Construction Site">
-      </div>
-
-      <!-- Vision -->
-      <div class="mv-card">
-        <div class="mv-icon"><i class="fas fa-eye"></i></div>
-        <h3>Our Vision</h3>
-        <p>To become a regional leader in sustainable construction by 2030 — where buildings are ecosystems that uplift communities, enhance safety, and embrace future technologies like AI and modular innovation.</p>
-      <p>Shaping the future of construction through innovation, sustainability, and exceptional craftsmanship</p>
-      <h2>Building Tomorrow's World</h2>
-                <p>At BuildRite Construction, we envision a future where buildings are more than structures - they're sustainable ecosystems that enhance lives and communities</p>
-              <h3>Our 2030 Vision</h3>
-                    <p>By 2030, BuildRite Construction aims to be the most trusted and innovative construction partner in the region, recognized for transforming the built environment through cutting-edge technologies and sustainable practices.</p>
-                    <p>We see a future where every project we undertake not only meets the highest standards of quality and safety but also contributes positively to environmental conservation and community development.</p>
-                    <p>Our vision extends beyond construction - we're building a legacy of excellence that will inspire the next generation of builders and architects to push boundaries and redefine what's possible.</p>
-                    <img style=" width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);" src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Future Construction">
-                   <!-- <h2>Strategic Goals</h2>
-                <p>The key milestones that will guide us toward realizing our vision</p>
-               <h4>Sustainable Construction</h4>
-                    <p>Transition 100% of our projects to net-zero carbon footprint by 2028 through renewable materials and energy-efficient designs.</p>
-                   <h4>Technology Integration</h4>
-                    <p>Implement AI-driven project management and robotic construction technologies across all major projects by 2025.</p>
-                   <h4>Workforce Development</h4>
-                    <p>Train 500+ skilled workers in next-generation construction techniques through our BuildRite Academy by 2026.</p>
-                    <h4>Community Impact</h4>
-                    <p>Develop 10 community-focused projects annually that address affordable housing and urban renewal needs.</p>
-                   <h4>Market Leadership</h4>
-                    <p>Become the regional leader in modular and prefabricated construction solutions by 2027.</p>
-                    <h4>Safety Innovation</h4>
-                    <p>Develop and implement a proprietary safety system that reduces worksite incidents by 90% by 2025.</p> -->
-                    <h2>Pioneering Innovation</h2>
-                <p>How we're transforming the construction industry</p>
-               <h3>Redefining Construction</h3>
-                    <p>At BuildRite, we're not just keeping pace with industry changes - we're driving them. Our dedicated R&D team is constantly exploring new materials, methods, and technologies that will shape the future of construction.</p>
-                    <p>From 3D-printed building components to smart IoT-enabled structures, we're investing in innovations that will make buildings more sustainable, affordable, and adaptable to future needs.</p>
-                    <p>We partner with leading universities and tech companies to stay at the forefront of construction innovation, ensuring our clients benefit from the latest advancements in the field.</p>
-                    <a href="contact.html" id="btn">Join Our Journey</a>
-                    <img style=" width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);" src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Construction Innovation">
-                </div>
-    </div>
-  </div>
-</section>
-
-<!-- Inline CSS -->
-<style>
-/* Mission & Vision Section */
-.mission-vision-section {
-  padding: 80px 20px;
-  background-color: #f9f9f9;
-}
-
-.mission-vision-section .section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.mission-vision-section .section-header h2 {
-  font-size: 2.5rem;
-  color: #2a5d8a;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.mission-vision-section .section-header p {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.mv-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.mv-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 40px 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.mv-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
-
-.mv-icon {
-  font-size: 2.8rem;
-  color: #e67e22;
-  margin-bottom: 20px;
-}
-
-.mv-card h3 {
-  font-size: 1.6rem;
-  color: #2a5d8a;
-  margin-bottom: 15px;
-}
-
-.mv-card p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .mission-vision-section .section-header h2 {
-    font-size: 2rem;
-  }
-
-  .mv-card h3 {
-    font-size: 1.4rem;
-  }
-}
-</style>
-<!-- Mission & Vision Section End -->
-            <!-- Mission Hero Section -->
-    <!-- <section id="mission-hero">
-        <div id="hero-content">
-            <h1>Our Mission</h1>
-            <p>Building excellence through innovation, quality, and unwavering commitment to our clients and communities
-            </p>
-        </div>
-    </section> -->
-
-    <!-- Mission Statement Section -->
-    <!-- <section id="mission-statement">
-        <div id="container">
-            <div id="section-header">
-                <h2>Building the Future</h2>
-                <p>At BuildRite Construction, we don't just construct buildings - we create lasting value for our
-                    clients and communities</p>
-            </div>
-
-            <div id="mission-content">
-                <div id="mission-text">
-                    <h3>Our Purpose</h3>
-                    <p>BuildRite Construction exists to transform visions into reality through exceptional
-                        craftsmanship, innovative solutions, and sustainable practices. We are committed to building
-                        structures that stand the test of time while positively impacting the communities we serve.</p>
-                    <p>Our mission guides every project we undertake, from initial concept to final completion. We
-                        measure our success not just by the buildings we deliver, but by the relationships we build and
-                        the positive change we create.</p>
-                    <p>Through our work, we aim to set new standards in the construction industry while maintaining our
-                        core values of integrity, excellence, and social responsibility.</p>
-                </div>
-                <div id="mission-image">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                        alt="BuildRite Construction Team">
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Core Values Section -->
-    <section id="core-values">
-        <div id="container">
-            <div id="section-header">
-                <h2>Our Core Values (Mission)</h2>
-                <h3>The principles that guide every decision we make and every project we undertake</h3>
-            </div>
-
-            <div id="values-grid">
-                <div id="value-card-1" class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h4>Quality Excellence</h4>
-                    <p>We never compromise on quality. Every detail matters, and we hold ourselves to the highest
-                        standards of craftsmanship and materials.</p>
-                </div>
-
-                <div id="value-card-2" class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h4>Integrity</h4>
-                    <p>We do what's right, even when no one is watching. Honesty and transparency form the foundation of
-                        all our relationships.</p>
-                </div>
-
-                <div id="value-card-3" class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h4>Innovation</h4>
-                    <p>We embrace new technologies and methods that improve efficiency, sustainability, and the overall
-                        quality of our work.</p>
-                </div>
-
-                <div id="value-card-4" class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Collaboration</h4>
-                    <p>We believe the best results come from teamwork - with our clients, partners, and within our own
-                        organization.</p>
-                </div>
-
-                <div id="value-card-5" class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h4>Sustainability</h4>
-                    <p>We're committed to environmentally responsible practices that reduce our ecological footprint and
-                        create healthier spaces.</p>
-                </div>
-
-                <div id="value-card-6" class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-hard-hat"></i>
-                    </div>
-                    <h4>Safety First</h4>
-                    <p>The well-being of our team, clients, and community is our top priority on every job site.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Commitment Section -->
-    <!-- <section id="commitment">
-        <div id="container">
-            <div id="section-header">
-                <h2>Our Commitment</h2>
-                <p>What sets BuildRite apart in the construction industry</p>
-            </div>
-
-            <div id="commitment-content">
-                <div id="commitment-text">
-                    <h3>Building Beyond Structures</h3>
-                    <p>We're committed to more than just completing projects - we're dedicated to creating lasting
-                        value. Our approach combines technical expertise with a deep understanding of our clients' needs
-                        and aspirations.</p>
-                    <p>From the initial planning stages through final completion, we maintain open communication and
-                        transparency. Our team brings together decades of experience with fresh perspectives to deliver
-                        exceptional results.</p>
-                    <p>We stand behind our work with comprehensive warranties and ongoing support, because our
-                        relationship with clients doesn't end when construction is complete.</p>
-                    <a href="contact.html" id="btn">Get in Touch</a>
-                </div>
-                <div id="commitment-image">
-                    <img src="https://media.istockphoto.com/id/1334275012/photo/engineer-designer-and-architect-people-shaking-hands-in-the-office-for-building-agreement-of.jpg?s=2048x2048&w=is&k=20&c=qsZyfssN_Z-HP0HhNw_wcBZAlKuDFvqE2uMLcN-RuNM="
-                        alt="BuildRite Construction Site">
-                </div>
-            </div>
-        </div>
-    </section> -->
-        <!-- Vision Hero Section -->
-    <!-- <section id="vision-hero">
-        <div id="hero-content">
-            <h1>Our Vision</h1>
-            <p>Shaping the future of construction through innovation, sustainability, and exceptional craftsmanship</p>
-        </div>
-    </section> -->
-    
-    <!-- Vision Statement Section -->
-    <!-- <section id="vision-statement">
-        <div id="container">
-            <div id="section-header">
-                <h2>Building Tomorrow's World</h2>
-                <p>At BuildRite Construction, we envision a future where buildings are more than structures - they're sustainable ecosystems that enhance lives and communities</p>
-            </div>
-            
-            <div id="vision-content">
-                <div id="vision-text">
-                    <h3>Our 2030 Vision</h3>
-                    <p>By 2030, BuildRite Construction aims to be the most trusted and innovative construction partner in the region, recognized for transforming the built environment through cutting-edge technologies and sustainable practices.</p>
-                    <p>We see a future where every project we undertake not only meets the highest standards of quality and safety but also contributes positively to environmental conservation and community development.</p>
-                    <p>Our vision extends beyond construction - we're building a legacy of excellence that will inspire the next generation of builders and architects to push boundaries and redefine what's possible.</p>
-                </div>
-                <div id="vision-image">
-                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Future Construction">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-     <!-- Future Goals Section -->
-    <section id="future-goals">
-        <div id="container">
-            <div id="section-header">
-                <h2>Strategic Goals (Vision)</h2>
-                <h3>The key milestones that will guide us toward realizing our vision</h3>
-            </div>
-            
-            <div id="goals-grid">
-                <div id="goal-card">
-                    <div id="goal-number">01</div>
-                    <div id="goal-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h4>Sustainable Construction</h4>
-                    <p>Transition 100% of our projects to net-zero carbon footprint by 2028 through renewable materials and energy-efficient designs.</p>
-                </div>
-                
-                <div id="goal-card">
-                    <div id="goal-number">02</div>
-                    <div id="goal-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h4>Technology Integration</h4>
-                    <p>Implement AI-driven project management and robotic construction technologies across all major projects by 2025.</p>
-                </div>
-                
-                <div id="goal-card">
-                    <div id="goal-number">03</div>
-                    <div id="goal-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h4>Workforce Development</h4>
-                    <p>Train 500+ skilled workers in next-generation construction techniques through our BuildRite Academy by 2026.</p>
-                </div>
-                
-                <div id="goal-card">
-                    <div id="goal-number">04</div>
-                    <div id="goal-icon">
-                        <i class="fas fa-city"></i>
-                    </div>
-                    <h4>Community Impact</h4>
-                    <p>Develop 10 community-focused projects annually that address affordable housing and urban renewal needs.</p>
-                </div>
-                
-                <div id="goal-card">
-                    <div id="goal-number">05</div>
-                    <div id="goal-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h4>Market Leadership</h4>
-                    <p>Become the regional leader in modular and prefabricated construction solutions by 2027.</p>
-                </div>
-                
-                <div id="goal-card">
-                    <div id="goal-number">06</div>
-                    <div id="goal-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h4>Safety Innovation</h4>
-                    <p>Develop and implement a proprietary safety system that reduces worksite incidents by 90% by 2025.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    
-    <!-- Innovation Section -->
-    <!-- <section id="innovation">
-        <div id="container">
-            <div id="section-header">
-                <h2>Pioneering Innovation</h2>
-                <p>How we're transforming the construction industry</p>
-            </div>
-            
-            <div id="innovation-content">
-                <div id="innovation-text">
-                    <h3>Redefining Construction</h3>
-                    <p>At BuildRite, we're not just keeping pace with industry changes - we're driving them. Our dedicated R&D team is constantly exploring new materials, methods, and technologies that will shape the future of construction.</p>
-                    <p>From 3D-printed building components to smart IoT-enabled structures, we're investing in innovations that will make buildings more sustainable, affordable, and adaptable to future needs.</p>
-                    <p>We partner with leading universities and tech companies to stay at the forefront of construction innovation, ensuring our clients benefit from the latest advancements in the field.</p>
-                    <a href="contact.html" id="btn">Join Our Journey</a>
-                </div>
-                <div id="innovation-image">
-                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Construction Innovation">
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <style>
-       
-        
         #vision-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -796,39 +375,39 @@
             color: var(--white);
             padding: 0 20px;
         }
-        
+
         #hero-content {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         #hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             font-weight: 700;
         }
-        
+
         #hero-content p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         #vision-statement {
             padding: 80px 20px;
             background-color: var(--white);
         }
-        
+
         #container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         #section-header {
             text-align: center;
             margin-bottom: 60px;
         }
-        
+
         #section-header h2 {
             font-size: 2.5rem;
             color: var(--primary);
@@ -836,7 +415,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         #section-header h2:after {
             content: '';
             position: absolute;
@@ -847,67 +426,67 @@
             height: 3px;
             background: var(--secondary);
         }
-        
+
         #section-header p {
             font-size: 1.1rem;
             color: var(--medium);
             max-width: 700px;
             margin: 0 auto;
         }
-        
+
         #vision-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
         }
-        
+
         #vision-text h3 {
             font-size: 1.8rem;
             color: var(--primary);
             margin-bottom: 20px;
         }
-        
+
         #vision-text p {
             margin-bottom: 20px;
             color: var(--medium);
             line-height: 1.8;
         }
-        
+
         #vision-image img {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         #future-goals {
             padding: 80px 20px;
             background-color: var(--light);
         }
-        
+
         #goals-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
-        
+
         #goal-card {
             background: var(--white);
             padding: 40px 30px;
             border-radius: 8px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-        
+
         #goal-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         #goal-number {
             position: absolute;
             top: 15px;
@@ -917,7 +496,7 @@
             color: rgba(42, 93, 138, 0.1);
             z-index: 1;
         }
-        
+
         #goal-icon {
             font-size: 2.5rem;
             color: var(--secondary);
@@ -925,7 +504,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         #goal-card h4 {
             font-size: 1.4rem;
             color: var(--primary);
@@ -933,52 +512,52 @@
             position: relative;
             z-index: 2;
         }
-        
+
         #goal-card p {
             color: var(--medium);
             line-height: 1.7;
             position: relative;
             z-index: 2;
         }
-        
+
         #innovation {
             padding: 80px 20px;
             background-color: var(--primary);
             color: var(--white);
         }
-        
+
         #innovation #section-header h2 {
             color: var(--white);
         }
-        
+
         #innovation #section-header p {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
         }
-        
+
         #innovation-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: center;
         }
-        
+
         #innovation-image img {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
-        
+
         #innovation-text h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
         }
-        
+
         #innovation-text p {
             margin-bottom: 20px;
             line-height: 1.8;
             opacity: 0.9;
         }
-        
+
         #btn {
             display: inline-block;
             padding: 12px 30px;
@@ -991,13 +570,14 @@
             border: none;
             cursor: pointer;
         }
-        
+
         #btn:hover {
             background: #d1711e;
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-                #mission-hero {
+
+        #mission-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
@@ -1193,6 +773,7 @@
         }
 
         @media (max-width: 992px) {
+
             #mission-content,
             #commitment-content {
                 grid-template-columns: 1fr;
@@ -1223,35 +804,40 @@
                 font-size: 1.5rem;
             }
         }
-        
+
         @media (max-width: 992px) {
-            #vision-content, #innovation-content {
+
+            #vision-content,
+            #innovation-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
-            #vision-image, #innovation-image {
+
+            #vision-image,
+            #innovation-image {
                 order: -1;
             }
-            
+
             #hero-content h1 {
                 font-size: 2.8rem;
             }
         }
-        
+
         @media (max-width: 768px) {
             #hero-content h1 {
                 font-size: 2.2rem;
             }
-            
+
             #section-header h2 {
                 font-size: 2rem;
             }
-            
-            #vision-text h3, #innovation-text h3 {
+
+            #vision-text h3,
+            #innovation-text h3 {
                 font-size: 1.5rem;
             }
         }
+
         .accordion {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             max-width: 900px;
@@ -1428,14 +1014,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">
-                         <h3>Kore<span>Arch</span></h3>
-                        <H5>INFRASTRUCTURE</H5><BR></BR>
-                    </div>
+                    <div class="logo">
+  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+</div><br><br>
+
                     <p> Your trusted partner in delivering excellence for medium
                         and large-scale projects involving steel and concrete
                         structures.</p>
-                        
+
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -1457,34 +1043,37 @@
                         <li><a href="general-contracting-for-all-segments.html">General Contracting</a></li>
                     </ul>
                 </div>
-        <!-- Font Awesome CDN: make sure this is added in <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+                <!-- Font Awesome CDN: make sure this is added in <head> -->
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-    <div class="footer-widget__column footer-widget__contact">
-        <div class="footer-widget__title-box">
-            <h3 class="footer-widget__title">Contact</h3>
-        </div><br>
-        <p class="footer-widget__contact-text">
-            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
-            Taramandal, Gorakhpur, 273017
-        </p><br>
-        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
-            <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
-            </li>
-            <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
-            </li>
-            <li style="display: flex; align-items: center;">
-                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="#">Korearch Infrastructure</a></span>
-            </li>
-        </ul>
-    </div>
-</div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="footer-widget__column footer-widget__contact">
+                        <div class="footer-widget__title-box">
+                            <h3 class="footer-widget__title">Contact</h3>
+                        </div><br>
+                        <p class="footer-widget__contact-text">
+                            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
+                            Taramandal, Gorakhpur, 273017
+                        </p><br>
+                        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
+                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a
+                                        href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
+                            </li>
+                            <li style="display: flex; align-items: center;">
+                                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a
+                                        href="https://korearchinfra.com/">Korearchinfra.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
             <div class="footer-bottom">

@@ -12,92 +12,100 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/responsive.css">
     <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
 
-    .section-welcome {
-      padding: 60px 20px;
-      background-color: #f7f7f7;
-      overflow: hidden;
-    }
+        .section-welcome {
+            padding: 60px 20px;
+            background-color: #f7f7f7;
+            overflow: hidden;
+        }
 
-    .container-welcome {
-      max-width: 1200px;
-      margin: auto;
-    }
+        .container-welcome {
+            max-width: 1200px;
+            margin: auto;
+        }
 
-    .div-welcome-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
+        .div-welcome-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
 
-    .welcome-heading-only {
-      flex: 1 1 100%;
-    }
+        .welcome-heading-only {
+            flex: 1 1 100%;
+        }
 
-    .h1-welcome {
-      font-size: 32px;
-      color: #222;
-      margin-top: 0;
-    }
+        .h1-welcome {
+            font-size: 32px;
+            color: #222;
+            margin-top: 0;
+        }
 
-    .highlight {
-      color: #D35400;
-      font-weight: bold;
-    }
+        .highlight {
+            color: #D35400;
+            font-weight: bold;
+        }
 
-    .welcome-full-text {
-      flex: 1 1 100%;
-    }
+        .welcome-full-text {
+            flex: 1 1 100%;
+        }
 
-    .welcome-full-text p {
-      margin-bottom: 20px;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #444;
-    }
+        .welcome-full-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+        }
 
-    @media (min-width: 768px) {
-      .welcome-heading-only {
-        flex: 1 1 30%;
-      }
+        @media (min-width: 768px) {
+            .welcome-heading-only {
+                flex: 1 1 30%;
+            }
 
-      .welcome-full-text {
-        flex: 1 1 65%;
-      }
-    }
+            .welcome-full-text {
+                flex: 1 1 65%;
+            }
+        }
 
-    /* Slide animation */
-    .animate-slide {
-      opacity: 0;
-      transform: translateX(-50px);
-      transition: all 0.8s ease-in-out;
-    }
+        /* Slide animation */
+        .animate-slide {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-in-out;
+        }
 
-    .animate-slide.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
+        .animate-slide.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 
 <body>
+    <a href="#" class="tel_a" style="right: 21px; bottom: 105px; background-color: #da8953;" target="_blank"
+        rel="noreferrer noopener">
+        <i class="fa fa-envelope"></i>
+    </a>
+    <a href="#" class="whatsapp_a" style="right: 21px; bottom: 30px; background-color: #25D366;" target="_blank"
+        rel="noreferrer noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     <!-- Header with Navigation -->
     <header class="header" id="header">
         <div class="container">
             <div class="logo">
-                <h1>Kore<span>Arch</span></h1>
-                <H5>INFRASTRUCTURE</H5>
+                <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
             </div>
+
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="./index.html" class="nav-link active">Home</a></li>
@@ -125,6 +133,8 @@
                                     Completed</a></li>
                             <li><a href="GoingProject.html" class="dropdown-link"><i class="fas fa-tasks"></i>
                                     Ongoing</a></li>
+                            <li><a href="all-projects.html" class="dropdown-link"><i class="fas fa-th-list"></i>
+                                    All Projects</a></li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
@@ -133,7 +143,10 @@
                         <ul class="dropdown-menu">
                             <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
                                     Careers</a></li>
-                            <li><a href="./blog.html" class="dropdown-link"><i class="fas fa-blog"></i> Blog</a></li>
+                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
+                                    Certification</a></li>
+                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
+                                    Vendor Registration</a></li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" class="nav-link contact-btn">Get a Quote</a></li>
@@ -172,15 +185,19 @@
                 <ul class="mobile-dropdown-menu">
                     <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
                     <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
+                     <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
                 </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-dropdown-container">
                 <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
-                <ul class="mobile-dropdown-menu">
-                    <li><a href="./careers.html" class="mobile-dropdown-link">Careers</a></li>
-                    <!-- <li><a href="./testimonials.html" class="mobile-dropdown-link">Testimonials</a></li> -->
-                    <li><a href="./blog.html" class="mobile-dropdown-link">Blog</a></li>
+                <ul class="dropdown-menu">
+                    <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
+                            Careers</a></li>
+                    <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
+                            Certification</a></li>
+                    <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
+                            Vendor Registration</a></li>
                 </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link contact-btn"
@@ -191,20 +208,17 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-slides">
-            <div class="slide active"
-                style="background-image: url('https://images.unsplash.com/photo-1671647497718-7b24e5a05430?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzF8fENpdmlsJTIwQ29uc3RydWN0aW9ufGVufDB8fDB8fHww')">
+            <div class="slide active" style="background-image: url('./images/g1.jpg')">
             </div>
             <div class="slide"
-                style="background-image: url('https://plus.unsplash.com/premium_photo-1733864822250-59c5c69af1c3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTV8fGZhcm0lMjBob3VzZSUyMG5ldyUyMGRlc2luZ3xlbnwwfHwwfHx8MA%3D%3D')">
+                style="background-image: url('https://plus.unsplash.com/premium_photo-1682377521753-58d1fd9fa5ce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
             </div>
             <div class="slide"
-                style="background-image: url('https://plus.unsplash.com/premium_photo-1682148941047-06d90da45b10?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                style="background-image: url('https://images.unsplash.com/photo-1658119050403-b6b1600e86fa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
             </div>
-            <div class="slide"
-                style="background-image: url('https://media.istockphoto.com/id/1284941025/photo/digitally-rendered-view-of-a-beautiful-living-room.webp?a=1&b=1&s=612x612&w=0&k=20&c=EQkirwPuGE6wU98Xbh5So170n6xX_M1y5LHZmh5OYEM=')">
+            <div class="slide" style="background-image: url('./images/int.jpg')">
             </div>
-            <div class="slide"
-                style="background-image: url('https://images.unsplash.com/photo-1671647489472-36d340509ae8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fENpdmlsJTIwQ29uc3RydWN0aW9ufGVufDB8fDB8fHww')">
+            <div class="slide" style="background-image: url('./images/9.jpg')">
             </div>
         </div>
         <div class="hero-overlay"></div>
@@ -213,7 +227,7 @@
                 <div class="hero-content active">
                     <h2>Green Building</h2>
                     <p>Eco-friendly designs, energy-efficient materials, and
-                    innovative solutions for a better tomorrow. Choose sustainability—choose Green Building!</p>
+                        innovative solutions for a better tomorrow. Choose sustainability—choose Green Building!</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn btn-primary">Get a Quote</a>
                         <a href="green-buildings.html" class="btn btn-secondary">Our Services</a>
@@ -222,7 +236,7 @@
                 <div class="hero-content">
                     <h2>Premium – Villas Pods & Farmhouse</h2>
                     <p>Eco-friendly designs, energy-efficient materials, and innovative solutions for a better
-                    tomorrow. Choose sustainability—choose Green Building!
+                        tomorrow. Choose sustainability—choose Green Building!
                     </p>
                     <div class="hero-buttons">
                         <a href="premium-modular-villas-pods-and-farmhouses.html" class="btn btn-primary">Learn More</a>
@@ -232,8 +246,8 @@
                 <div class="hero-content">
                     <h2>CIVIL CONSTRUCTION</h2>
                     <p>Experience unmatched quality and precision with our premium civil construction services.
-                     From concept to completion, we deliver durable, innovative, and reliable solutions.
-                     Build with confidence!</p>
+                        From concept to completion, we deliver durable, innovative, and reliable solutions.
+                        Build with confidence!</p>
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn btn-primary">Contact Us</a>
                         <a href="civil-construction.html" class="btn btn-secondary">Our Projects</a>
@@ -242,7 +256,7 @@
                 <div class="hero-content">
                     <h2>Interior And Exterior</h2>
                     <p>Eco-friendly designs, energy-efficient materials, and innovative solutions for a better
-                    tomorrow. Choose sustainability—choose Green Building!
+                        tomorrow. Choose sustainability—choose Green Building!
                     </p>
                     <div class="hero-buttons">
                         <a href="interior-and-exterior.html" class="btn btn-primary">Learn More</a>
@@ -252,7 +266,7 @@
                 <div class="hero-content">
                     <h2>General Contracting</h2>
                     <p>Eco-friendly designs, energy-efficient materials, and innovative solutions for a better
-                    tomorrow. Choose sustainability—choose Green Building!
+                        tomorrow. Choose sustainability—choose Green Building!
                     </p>
                     <div class="hero-buttons">
                         <a href="general-contracting-for-all-segments.html" class="btn btn-primary">Learn More</a>
@@ -263,6 +277,8 @@
         </div>
         <div class="slider-nav">
             <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
             <span class="slider-dot"></span>
             <span class="slider-dot"></span>
         </div>
@@ -298,7 +314,8 @@
                             <h3>Modular villas, Pods and Farm Houses</h3>
                             <p>Experience modern comfort with modular villas, eco pods, and farm retreats — sustainable,
                                 stylish, and built for future living.</p>
-                            <a href="premium-modular-villas-pods-and-farmhouses.html" class="btn btn-secondary">View More</a>
+                            <a href="premium-modular-villas-pods-and-farmhouses.html" class="btn btn-secondary">View
+                                More</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -319,8 +336,8 @@
                     <div class="swiper-slide">
                         <div class="service-card">
                             <div id="service-image">
-                                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Site Supervision"
-                                    style="width:100%;height:100%;object-fit:cover;">
+                                <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D"
+                                    alt="Site Supervision" style="width:100%;height:100%;object-fit:cover;">
                             </div>
                             <h3>Interior & Exterior</h3>
                             <p>Expertly crafted interior and exterior solutions — blending aesthetics, functionality,
@@ -332,8 +349,8 @@
                     <div class="swiper-slide">
                         <div class="service-card">
                             <div id="service-image">
-                                <img src="https://images.unsplash.com/photo-1671647489472-36d340509ae8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fENpdmlsJTIwQ29uc3RydWN0aW9ufGVufDB8fDB8fHww" alt="Utilities Installation"
-                                    style="width:100%;height:100%;object-fit:cover;">
+                                <img src="https://images.unsplash.com/photo-1671647489472-36d340509ae8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fENpdmlsJTIwQ29uc3RydWN0aW9ufGVufDB8fDB8fHww"
+                                    alt="Utilities Installation" style="width:100%;height:100%;object-fit:cover;">
                             </div>
                             <h3>General Contracting for all segments</h3>
                             <p>Providing reliable general contracting services for all sectors — ensuring seamless
@@ -459,41 +476,41 @@
 
     <hr class="styled-hr">
     <!-- Welcome Section -->
-<section class="welcome-section section-welcome">
-    <div class="container container-welcome">
-      <div class="welcome-content div-welcome-content">
+    <section class="welcome-section section-welcome">
+        <div class="container container-welcome">
+            <div class="welcome-content div-welcome-content">
 
-        <!-- Left side: Heading -->
-        <div class="welcome-heading-only animate-slide" data-animate>
-          <h1 class="h1-welcome">
-            Welcome to <span class="highlight">Korearch Infrastructure Pvt Ltd</span>
-          </h1>
+                <!-- Left side: Heading -->
+                <div class="welcome-heading-only animate-slide" data-animate>
+                    <h1 class="h1-welcome">
+                        Welcome to <span class="highlight">Korearch Infrastructure Pvt Ltd</span>
+                    </h1>
+                </div>
+
+                <!-- Right side: Text -->
+                <div class="welcome-full-text animate-slide" data-animate>
+                    <p class="p-intro">
+                        Korearch Infrastructure is your trusted partner in delivering excellence for
+                        medium and large-scale projects across industrial, commercial, and residential sectors.
+                        We specialize in steel structures, civil works, premium villas, and modular pods,
+                        ensuring precision, durability, and innovation in every build.
+                    </p>
+                    <p class="p-expertise">
+                        Our expertise spans hybrid steel structures, light gauge steel framing (LGSF),
+                        and turnkey developments, integrating cutting-edge engineering with superior craftsmanship.
+                        From substructure-civil work to fabrication, PEB (Pre-Engineered Buildings),
+                        façade, and roofing, we offer end-to-end solutions that redefine quality and efficiency.
+                    </p>
+                    <p class="p-commitment">
+                        With a commitment to sustainability, on-time delivery, and future-ready infrastructure,
+                        we transform visions into reality.
+                        <span class="highlight">Partner with us and build with confidence.</span>
+                    </p>
+                </div>
+
+            </div>
         </div>
-
-        <!-- Right side: Text -->
-        <div class="welcome-full-text animate-slide" data-animate>
-          <p class="p-intro">
-            Korearch Infrastructure is your trusted partner in delivering excellence for
-            medium and large-scale projects across industrial, commercial, and residential sectors.
-            We specialize in steel structures, civil works, premium villas, and modular pods,
-            ensuring precision, durability, and innovation in every build.
-          </p>
-          <p class="p-expertise">
-            Our expertise spans hybrid steel structures, light gauge steel framing (LGSF),
-            and turnkey developments, integrating cutting-edge engineering with superior craftsmanship.
-            From substructure-civil work to fabrication, PEB (Pre-Engineered Buildings),
-            façade, and roofing, we offer end-to-end solutions that redefine quality and efficiency.
-          </p>
-          <p class="p-commitment">
-            With a commitment to sustainability, on-time delivery, and future-ready infrastructure,
-            we transform visions into reality.
-            <span class="highlight">Partner with us and build with confidence.</span>
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Our Clients & Partners -->
     <section id="clients-section">
@@ -554,13 +571,13 @@
                 <div id="swiper-container">
                     <div class="swiper-wrapper">
                         <!-- Testimonial 1 -->
-                        <!-- <div class="swiper-slide">
+                        <div class="swiper-slide">
                             <div id="testimonial-card">
                                 <div id="client-info">
                                     <div id="client-avatar">V</div>
                                     <div id="client-details">
                                         <h3 id="client-name">Vikram Rao</h3>
-                                        <p id="client-company">Phoenix Engineering</p>
+                                        <p id="client-company">Civil Engineering</p>
                                         <div id="rating">
                                             <span id="star">★</span>
                                             <span id="star">★</span>
@@ -575,7 +592,7 @@
                                     team ensured quality execution while maintaining strict project timelines.
                                 </p>
                             </div>
-                        </div> -->
+                        </div>
 
                         <!-- Testimonial 2 -->
                         <div class="swiper-slide">
@@ -602,6 +619,54 @@
                         </div>
 
                         <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div id="testimonial-card">
+                                <div id="client-info">
+                                    <div id="client-avatar">N</div>
+                                    <div id="client-details">
+                                        <h3 id="client-name">Nikhil Verma</h3>
+                                        <p id="client-company">Centre for Excellence, Andhra Govt.</p>
+                                        <div id="rating">
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="testimonial-text">
+                                    Their professionalism and ability to adapt to project needs made the entire
+                                    construction process smooth. The final output was beyond expectations!
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <div id="testimonial-card">
+                                <div id="client-info">
+                                    <div id="client-avatar">A</div>
+                                    <div id="client-details">
+                                        <h3 id="client-name">Aman Gill</h3>
+                                        <p id="client-company">G. Das Degree & P.G. College Andhra Govt.</p>
+                                        <div id="rating">
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="testimonial-text">
+                                    Their professionalism and ability to adapt to project needs made the entire
+                                    construction process smooth. The final output was beyond expectations!
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
                         <div class="swiper-slide">
                             <div id="testimonial-card">
                                 <div id="client-info">
@@ -625,14 +690,14 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 1 -->
-                        <!-- <div class="swiper-slide">
+                        <!-- Testimonial 6 -->
+                        <div class="swiper-slide">
                             <div id="testimonial-card">
                                 <div id="client-info">
                                     <div id="client-avatar">V</div>
                                     <div id="client-details">
-                                        <h3 id="client-name">Vikram Rao</h3>
-                                        <p id="client-company">Phoenix Engineering</p>
+                                        <h3 id="client-name">Priyanka Singh</h3>
+                                        <p id="client-company">Civil Engineering</p>
                                         <div id="rating">
                                             <span id="star">★</span>
                                             <span id="star">★</span>
@@ -647,9 +712,9 @@
                                     team ensured quality execution while maintaining strict project timelines.
                                 </p>
                             </div>
-                        </div> -->
+                        </div>
 
-                        <!-- Testimonial 2 -->
+                        <!-- Testimonial 7 -->
                         <div class="swiper-slide">
                             <div id="testimonial-card">
                                 <div id="client-info">
@@ -673,7 +738,7 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 3 -->
+                        <!-- Testimonial 8 -->
                         <div class="swiper-slide">
                             <div id="testimonial-card">
                                 <div id="client-info">
@@ -713,14 +778,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">
-                        <h3>Kore<span>Arch</span></h3>
-                        <H5>INFRASTRUCTURE</H5><BR></BR>
-                    </div>
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+                    </div><br><br>
+
                     <p> Your trusted partner in delivering excellence for medium
                         and large-scale projects involving steel and concrete
                         structures.</p>
-                        
+
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -742,34 +807,37 @@
                         <li><a href="general-contracting-for-all-segments.html">General Contracting</a></li>
                     </ul>
                 </div>
-        <!-- Font Awesome CDN: make sure this is added in <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+                <!-- Font Awesome CDN: make sure this is added in <head> -->
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-    <div class="footer-widget__column footer-widget__contact">
-        <div class="footer-widget__title-box">
-            <h3 class="footer-widget__title">Contact</h3>
-        </div><br>
-        <p class="footer-widget__contact-text">
-            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
-            Taramandal, Gorakhpur, 273017
-        </p><br>
-        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
-            <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
-            </li>
-            <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
-            </li>
-            <li style="display: flex; align-items: center;">
-                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="#">Korearch Infrastructure</a></span>
-            </li>
-        </ul>
-    </div>
-</div>
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="footer-widget__column footer-widget__contact">
+                        <div class="footer-widget__title-box">
+                            <h3 class="footer-widget__title">Contact</h3>
+                        </div><br>
+                        <p class="footer-widget__contact-text">
+                            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
+                            Taramandal, Gorakhpur, 273017
+                        </p><br>
+                        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
+                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a
+                                        href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
+                            </li>
+                            <li style="display: flex; align-items: center;">
+                                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a
+                                        href="https://korearchinfra.com/">Korearchinfra.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
             <div class="footer-bottom">
@@ -821,22 +889,25 @@
         <p>Thank you for your message! We'll get back to you soon.</p>
     </div>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const elements = document.querySelectorAll("[data-animate]");
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll("[data-animate]");
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    } else {
+                        entry.target.classList.remove("visible"); // <== REMOVE CLASS to re-trigger animation
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+            elements.forEach((el) => observer.observe(el));
         });
-      }, {
-        threshold: 0.3
-      });
+    </script>
 
-      elements.forEach((el) => observer.observe(el));
-    });
-  </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>

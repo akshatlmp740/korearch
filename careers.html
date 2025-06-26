@@ -16,6 +16,7 @@
             padding: 20px 0;
             background-color: #f9f9f9;
             position: relative;
+            justify-content: space-evenly;
         }
 
         .careers .section-header {
@@ -46,7 +47,7 @@
 
         .careers-text h3 {
             font-size: 1.8rem;
-            color: #333;
+            color: #2a5d8a;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
@@ -59,7 +60,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background-color: #e67e22;
+            /* background-color: #e67e22; */
         }
 
         .careers-text p {
@@ -74,6 +75,8 @@
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             margin-top: 30px;
+            margin-top: 100PX;
+            height: 660PX;
         }
 
         .benefits h4 {
@@ -178,6 +181,125 @@
                 padding: 15px;
             }
         }
+        /* career form */
+        .careers-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.careers-form h3 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    background: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group small {
+    font-size: 13px;
+    color: #777;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.reset-btn,
+.send-btn {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-btn {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.send-btn {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #d5d5d5;
+}
+
+.send-btn:hover {
+    background-color: #3a78c2;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 600px) {
+    .careers-form {
+        padding: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .reset-btn,
+    .send-btn {
+        width: 100%;
+    }
+}
+
     </style>
 
     <!-- Add this right before the closing </head> tag -->
@@ -185,13 +307,21 @@
 </head>
 
 <body>
+    <a href="#" class="tel_a" style="right: 21px; bottom: 105px; background-color: #da8953;" target="_blank"
+        rel="noreferrer noopener">
+        <i class="fa fa-envelope"></i>
+    </a>
+    <a href="#" class="whatsapp_a" style="right: 21px; bottom: 30px; background-color: #25D366;" target="_blank"
+        rel="noreferrer noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     <!-- Header with Navigation -->
     <header class="header" id="header">
         <div class="container">
             <div class="logo">
-               <h1>Kore<span>Arch</span></h1>
-                <H5>INFRASTRUCTURE</H5>
-            </div>
+  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+</div>
+
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="./index.html" class="nav-link">Home</a></li>
@@ -219,6 +349,8 @@
                                     Completed</a></li>
                             <li><a href="GoingProject.html" class="dropdown-link"><i class="fas fa-tasks"></i>
                                     Ongoing</a></li>
+                            <li><a href="all-projects.html" class="dropdown-link"><i class="fas fa-th-list"></i>
+                                    All Projects</a></li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
@@ -227,7 +359,10 @@
                         <ul class="dropdown-menu">
                             <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
                                     Careers</a></li>
-                            <li><a href="./blog.html" class="dropdown-link"><i class="fas fa-blog"></i> Blog</a></li>
+                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
+                                    Certification</a></li>
+                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
+                                    Vendor Registration</a></li>
                         </ul>
                     </li>
                     <li><a href="./contact.html" class="nav-link contact-btn">Get a Quote</a></li>
@@ -266,16 +401,20 @@
                 <ul class="mobile-dropdown-menu">
                     <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
                     <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
+                     <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
                 </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-dropdown-container">
                 <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
-                <ul class="mobile-dropdown-menu">
-                    <li><a href="./careers.html" class="mobile-dropdown-link">Careers</a></li>
-                    <!-- <li><a href="./testimonials.html" class="mobile-dropdown-link">Testimonials</a></li> -->
-                    <li><a href="./blog.html" class="mobile-dropdown-link">Blog</a></li>
-                </ul>
+                <ul class="dropdown-menu">
+                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
+                                    Careers</a></li>
+                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
+                                    Certification</a></li>
+                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
+                                    Vendor Registration</a></li>
+                        </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link contact-btn"
                     style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
@@ -283,7 +422,21 @@
     </div>
 
 
-
+ <div id="pageheader">
+        <img id="pageheader-image"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+            alt="Premium Modular Villas,Pods and Farmhouses">
+        <div id="pageheader-overlay">
+            <div id="pageheader-content">
+                <h1>Careers at BuildRite</h1>
+                <nav id="pageheader-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span>Careers at BuildRite</span>
+                </nav>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Careers Section -->
@@ -291,7 +444,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Careers at BuildRite</h2>
-                <p>Join our team of construction professionals</p>
+                <h3>Join our team of construction professionals</h3>
             </div>
             <div class="careers-content">
                 <div class="careers-text">
@@ -313,24 +466,60 @@
                     </div>
                 </div>
                 <div class="careers-form">
-                    <h3>Current Openings</h3>
-                    <div class="job-openings">
-                        <div class="job-item">
-                            <h4>Project Manager</h4>
-                            <p>5+ years experience in construction management</p>
-                            <button class="btn btn-secondary apply-btn">Apply Now</button>
-                        </div>
-                        <div class="job-item">
-                            <h4>Civil Engineer</h4>
-                            <p>Bachelor's degree in Civil Engineering, PE license preferred</p>
-                            <button class="btn btn-secondary apply-btn">Apply Now</button>
-                        </div>
-                        <div class="job-item">
-                            <h4>Construction Supervisor</h4>
-                            <p>3+ years experience in site supervision</p>
-                            <button class="btn btn-secondary apply-btn">Apply Now</button>
-                        </div>
+                    <h3>CAREER FORM</h3>
+                    <form style="width: 600px;" id="jobForm" onsubmit="return validateForm() ">
+                    <div class="form-group">
+                        <label for="first-name">Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your name">
+                        <span id="first-name-error" class="error"></span>
                     </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <span id="email-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        <span id="phone-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Designation</label>
+                        <input type="text" id="phone" name="Designation" placeholder="Enter your Designation">
+                        <span id="phone-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <select id="city" name="city">
+                            <option value="">Select a city</option>
+                            <option value="Gorakhpur">Gorakhpur</option>
+                            <option value="Lucknow">Lucknow</option>
+                            <option value="Varanasi">Varanasi</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        <span id="city-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Address</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your address">
+                        <span id="last-name-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">About Your Self </label>
+                        <textarea id="address" name="address" placeholder="Enter about your self"></textarea>
+                        <span id="address-error" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv">Add Your CV</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+                        <small>Only .pdf/.doc/.docx. Size: less than 1 MB</small>
+                        <span id="cv-error" class="error"></span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="reset" class="reset-btn">Reset</button>
+                        <button type="submit" class="send-btn">Send</button>
+                    </div>
+                </form>
                 </div>
             </div>
         </div>
@@ -344,10 +533,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">
-                        <h3>Kore<span>Arch</span></h3>
-                        <H5>INFRASTRUCTURE</H5><BR></BR>
-                    </div>
+                    <div class="logo">
+  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+</div><br><br>
+
                     <p> Your trusted partner in delivering excellence for medium
                         and large-scale projects involving steel and concrete
                         structures.</p>
@@ -396,7 +585,8 @@
             </li>
             <li style="display: flex; align-items: center;">
                 <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="#">Korearch Infrastructure</a></span>
+                <span style="margin-left: 10px;"><a
+                                        href="https://korearchinfra.com/">Korearchinfra.com</a></span>
             </li>
         </ul>
     </div>
