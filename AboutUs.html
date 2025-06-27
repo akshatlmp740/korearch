@@ -26,8 +26,8 @@
     <header class="header" id="header">
         <div class="container">
             <div class="logo">
-  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
-</div>
+                <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+            </div>
 
             <nav class="nav">
                 <ul class="nav-list">
@@ -108,20 +108,18 @@
                 <ul class="mobile-dropdown-menu">
                     <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
                     <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
-                     <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
+                    <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
                 </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-dropdown-container">
-                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
-                <ul class="dropdown-menu">
-                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
-                                    Careers</a></li>
-                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
-                                    Certification</a></li>
-                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
-                                    Vendor Registration</a></li>
-                        </ul>
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="careers.html" class="mobile-dropdown-link">Career</a></li>
+                    <li><a href="certification.html" class="mobile-dropdown-link">Certification</a></li>
+                    <li><a href="vendor.html" class="mobile-dropdown-link">Vendor Registration</a></li>
+                </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link contact-btn"
                     style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
@@ -192,10 +190,10 @@
                 <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-                <div class="accordion-content-inner" style="display: flex; gap: 20px; width: 100%;">
-                    <div class="mission" style="width: 50%; height: 486px;">
-                        <p style="font-weight: 700;  text-align: center; font-size: 22px;"><u>Mission</u></p>
-                        <p style="height: 260px;">
+                <div class="accordion-content-inner mission-vision-flex">
+                    <div class="mission">
+                        <p class="mv-title"><u>Mission</u></p>
+                        <p>
                             <i class="fas fa-medal" style="color: #e67e22; margin-right: 8px;"></i>
                             To deliver proven premium quality work and modern intelligent solutions to buildings and
                             structural steel for the infrastructure industry by utilizing creative engineering and the
@@ -204,7 +202,6 @@
                             fulfill this mission, we will treat all employees fairly and involve them in the quality
                             improvement process to ensure responsiveness and cost-effective work execution.
                         </p>
-
                         <div class="highlight-box">
                             <p>
                                 <i class="fas fa-bullseye" style="color: #e74c3c; margin-right: 8px;"></i>
@@ -214,29 +211,81 @@
                             </p>
                         </div>
                     </div>
-
-                    <div class="vision" style="width: 50%;">
-                        <p style="font-weight: 700;  text-align: center; font-size: 22px;"><u>Vision</u></p>
-                        <p style="height: 260px;">
+                    <div class="vision">
+                        <p class="mv-title"><u>Vision</u></p>
+                        <p>
                             <i class="fas fa-medal" style="color: #e67e22; margin-right: 8px;"></i>
-                            With an unwavering commitment to innovation, sustainability, and superior
-                            craftsmanship, Korearch Infrastructure is shaping the future of construction across
-                            Pan India. Our mission is to create iconic, resilient, and forward-thinking
-                            infrastructure that not only meets but exceeds industry expectations.
+                            To be a leading force in transforming the construction industry by pioneering innovative,
+                            sustainable, and impactful infrastructure solutions across Pan India. We aim to set new
+                            benchmarks in quality, efficiency, and environmental responsibility, while consistently
+                            delivering exceptional value to our clients and communities. Our vision is to build a future
+                            where every project we undertake stands as a testament to our commitment to excellence and
+                            forward-thinking engineering.
                         </p>
-
                         <div class="highlight-box">
                             <p>
                                 <i class="fas fa-bullseye" style="color: #e74c3c; margin-right: 8px;"></i>
-                                We are dedicated to constructing spaces that define modern living, enhance commercial
-                                growth, and support industrial expansion with sustainable, high-performance
-                                solutions.
+                                We are committed to building spaces that shape modern living, foster commercial growth,
+                                and drive industrial expansion through sustainable, high-performance solutions that
+                                stand the test of time.
                             </p>
                         </div>
                     </div>
                 </div>
+                <style>
+                    .mission-vision-flex {
+                        display: flex;
+                        gap: 20px;
+                        width: 100%;
+                    }
+
+                    .mission-vision-flex .mission,
+                    .mission-vision-flex .vision {
+                        width: 50%;
+                        min-width: 280px;
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                    }
+
+                    .mission-vision-flex .mv-title {
+                        font-weight: 700;
+                        text-align: center;
+                        font-size: 22px;
+                        margin-bottom: 10px;
+                    }
+
+                    @media (max-width: 900px) {
+                        .mission-vision-flex {
+                            flex-direction: column;
+                            gap: 30px;
+                        }
+
+                        .mission-vision-flex .mission,
+                        .mission-vision-flex .vision {
+                            width: 100%;
+                        }
+                    }
+
+                    @media (max-width: 600px) {
+                        .mission-vision-flex {
+                            padding: 0;
+                        }
+
+                        .mission-vision-flex .mission,
+                        .mission-vision-flex .vision {
+                            padding: 0;
+                        }
+
+                        .mission-vision-flex .mv-title {
+                            font-size: 20px;
+                        }
+                    }
+                </style>
             </div>
         </div>
+
         <div class="accordion-section">
             <div class="accordion-header" onclick="toggleSection(this)">
                 <p>Our Expertise</p>
@@ -1015,8 +1064,8 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="logo">
-  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
-</div><br><br>
+                        <img src="images/logo2.png" alt="Korearch Logo" style="max-width: 200px;">
+                    </div><br>
 
                     <p> Your trusted partner in delivering excellence for medium
                         and large-scale projects involving steel and concrete

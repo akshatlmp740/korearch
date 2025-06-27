@@ -181,125 +181,135 @@
                 padding: 15px;
             }
         }
+
         /* career form */
         .careers-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    font-family: 'Segoe UI', sans-serif;
-}
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-.careers-form h3 {
-    font-size: 28px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 25px;
-}
+        .careers-form h3 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+        }
 
-.form-group {
-    margin-bottom: 20px;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #444;
-}
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
+        }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 14px;
-    font-size: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background: #f9f9f9;
-    transition: border 0.3s ease;
-}
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #f9f9f9;
+            transition: border 0.3s ease;
+        }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: #4a90e2;
-    outline: none;
-    background: #fff;
-}
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #4a90e2;
+            outline: none;
+            background: #fff;
+        }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
-}
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
 
-.form-group small {
-    font-size: 13px;
-    color: #777;
-}
+        .form-group small {
+            font-size: 13px;
+            color: #777;
+        }
 
-.error {
-    color: red;
-    font-size: 13px;
-    margin-top: 5px;
-    display: block;
-}
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+            display: block;
+        }
 
-.form-actions {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 25px;
-}
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 25px;
+        }
 
-.reset-btn,
-.send-btn {
-    flex: 1;
-    padding: 12px 0;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+        .reset-btn,
+        .send-btn {
+            flex: 1;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reset-btn {
+            /* background-color: var(--primary-color);
+    color: var(--pure-white); */
+    border-radius: 4px;
+    padding: 8px 30px;
+    margin-left: 10px;
+    text-decoration: none;
     transition: all 0.3s ease;
-}
+        }
 
-.reset-btn {
-    background-color: #e0e0e0;
-    color: #333;
-}
+        .send-btn {
+            background-color: var(--primary-color);
+    color: var(--pure-white);
+    border-radius: 4px;
+    padding: 8px 30px;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+        }
 
-.send-btn {
-    background-color: #4a90e2;
-    color: white;
-}
+        .reset-btn:hover {
+            background-color: #D35400;;
+        }
 
-.reset-btn:hover {
-    background-color: #d5d5d5;
-}
+        .send-btn:hover {
+            background-color: #D35400;;
+        }
 
-.send-btn:hover {
-    background-color: #3a78c2;
-}
+        /* Responsive for smaller screens */
+        @media screen and (max-width: 600px) {
+            .careers-form {
+                padding: 20px;
+            }
 
-/* Responsive for smaller screens */
-@media screen and (max-width: 600px) {
-    .careers-form {
-        padding: 20px;
-    }
+            .form-actions {
+                flex-direction: column;
+            }
 
-    .form-actions {
-        flex-direction: column;
-    }
-
-    .reset-btn,
-    .send-btn {
-        width: 100%;
-    }
-}
-
+            .reset-btn,
+            .send-btn {
+                width: 100%;
+            }
+        }
     </style>
 
     <!-- Add this right before the closing </head> tag -->
@@ -319,8 +329,8 @@
     <header class="header" id="header">
         <div class="container">
             <div class="logo">
-  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
-</div>
+                <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+            </div>
 
             <nav class="nav">
                 <ul class="nav-list">
@@ -401,20 +411,18 @@
                 <ul class="mobile-dropdown-menu">
                     <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
                     <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
-                     <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
+                    <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
                 </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-dropdown-container">
-                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
-                <ul class="dropdown-menu">
-                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
-                                    Careers</a></li>
-                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
-                                    Certification</a></li>
-                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
-                                    Vendor Registration</a></li>
-                        </ul>
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="careers.html" class="mobile-dropdown-link">Career</a></li>
+                    <li><a href="certification.html" class="mobile-dropdown-link">Certification</a></li>
+                    <li><a href="vendor.html" class="mobile-dropdown-link">Vendor Registration</a></li>
+                </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link contact-btn"
                     style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
@@ -422,7 +430,7 @@
     </div>
 
 
- <div id="pageheader">
+    <div id="pageheader">
         <img id="pageheader-image"
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
             alt="Premium Modular Villas,Pods and Farmhouses">
@@ -467,62 +475,126 @@
                 </div>
                 <div class="careers-form">
                     <h3>CAREER FORM</h3>
-                    <form style="width: 600px;" id="jobForm" onsubmit="return validateForm() ">
-                    <div class="form-group">
-                        <label for="first-name">Name</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="Enter your name">
-                        <span id="first-name-error" class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email">
-                        <span id="email-error" class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                        <span id="phone-error" class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Designation</label>
-                        <input type="text" id="phone" name="Designation" placeholder="Enter your Designation">
-                        <span id="phone-error" class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <select id="city" name="city">
-                            <option value="">Select a city</option>
-                            <option value="Gorakhpur">Gorakhpur</option>
-                            <option value="Lucknow">Lucknow</option>
-                            <option value="Varanasi">Varanasi</option>
-                            <!-- Add more options as needed -->
-                        </select>
-                        <span id="city-error" class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Address</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Enter your address">
-                        <span id="last-name-error" class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">About Your Self </label>
-                        <textarea id="address" name="address" placeholder="Enter about your self"></textarea>
-                        <span id="address-error" class="error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="cv">Add Your CV</label>
-                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
-                        <small>Only .pdf/.doc/.docx. Size: less than 1 MB</small>
-                        <span id="cv-error" class="error"></span>
-                    </div>
-                    <div class="form-actions">
-                        <button type="reset" class="reset-btn">Reset</button>
-                        <button type="submit" class="send-btn">Send</button>
-                    </div>
-                </form>
+                    <form id="jobForm" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="first-name">Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Enter your name">
+                            <span id="first-name-error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                            <span id="email-error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <span id="phone-error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="designation">Designation</label>
+                            <input type="text" id="designation" name="designation" placeholder="Enter your Designation">
+                            <span id="designation-error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <select id="city" name="city">
+                                <option value="">Select a city</option>
+                                <option value="Gorakhpur">Gorakhpur</option>
+                                <option value="Lucknow">Lucknow</option>
+                                <option value="Varanasi">Varanasi</option>
+                            </select>
+                            <span id="city-error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address">
+                            <span id="address-error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="about">About Yourself</label>
+                            <textarea id="about" name="about" placeholder="Enter about yourself"></textarea>
+                            <span id="about-error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cv">Add Your CV</label>
+                            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+                            <small>Only .pdf/.doc/.docx. Size: less than 1 MB</small>
+                            <span id="cv-error" class="error"></span>
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="reset-btn">Reset</button>
+                            <button type="submit" class="send-btn">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+        <style>
+            /* Responsive adjustments for careers section */
+            @media (max-width: 992px) {
+                .careers-content {
+                    grid-template-columns: 1fr !important;
+                    gap: 30px;
+                }
+                .careers-text, .careers-form {
+                    max-width: 100%;
+                    margin: 0 auto;
+                }
+                .benefits {
+                    height: auto;
+                    margin-top: 30px;
+                }
+            }
+            @media (max-width: 700px) {
+                .careers-form form {
+                    width: 100% !important;
+                    padding: 0;
+                }
+            }
+            @media (max-width: 600px) {
+                .careers .section-header h2 {
+                    font-size: 1.5rem;
+                }
+                .careers .section-header h3 {
+                    font-size: 1.1rem;
+                }
+                .careers-content {
+                    gap: 20px;
+                }
+                .careers-form {
+                    padding: 15px !important;
+                }
+                .careers-form h3 {
+                    font-size: 1.2rem;
+                }
+                .form-group input,
+                .form-group select,
+                .form-group textarea {
+                    font-size: 14px;
+                    padding: 10px 8px;
+                }
+                .form-actions {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .reset-btn, .send-btn {
+                    width: 100%;
+                    font-size: 15px;
+                }
+                .benefits {
+                    padding: 15px;
+                }
+            }
+            @media (max-width: 400px) {
+                .careers-form {
+                    padding: 5px !important;
+                }
+                .form-group label {
+                    font-size: 13px;
+                }
+            }
+        </style>
     </section>
 
 
@@ -534,13 +606,13 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="logo">
-  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
-</div><br><br>
+                        <img src="images/logo2.png" alt="Korearch Logo" style="max-width: 200px;">
+                    </div><br>
 
                     <p> Your trusted partner in delivering excellence for medium
                         and large-scale projects involving steel and concrete
                         structures.</p>
-                        
+
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
@@ -562,35 +634,37 @@
                         <li><a href="general-contracting-for-all-segments.html">General Contracting</a></li>
                     </ul>
                 </div>
-        <!-- Font Awesome CDN: make sure this is added in <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+                <!-- Font Awesome CDN: make sure this is added in <head> -->
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-    <div class="footer-widget__column footer-widget__contact">
-        <div class="footer-widget__title-box">
-            <h3 class="footer-widget__title">Contact</h3>
-        </div><br>
-        <p class="footer-widget__contact-text">
-            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
-            Taramandal, Gorakhpur, 273017
-        </p><br>
-        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
-            <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
-            </li>
-            <li style="display: flex; align-items: center; margin-bottom: 10px;">
-                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
-            </li>
-            <li style="display: flex; align-items: center;">
-                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
-                <span style="margin-left: 10px;"><a
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="footer-widget__column footer-widget__contact">
+                        <div class="footer-widget__title-box">
+                            <h3 class="footer-widget__title">Contact</h3>
+                        </div><br>
+                        <p class="footer-widget__contact-text">
+                            A 12, Budha Vihar, Part-A Near Rajshree Hospital, Opposite Sales Tax Office,
+                            Taramandal, Gorakhpur, 273017
+                        </p><br>
+                        <ul class="footer-widget__contact-list" style="list-style: none; padding-left: 0; margin: 0;">
+                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <i class="fas fa-phone" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a href="tel:918826224808">+91 80902 54946</a></span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <i class="fas fa-envelope" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a
+                                        href="mailto:korearchinfra@gmail.com">korearchinfra@gmail.com</a></span>
+                            </li>
+                            <li style="display: flex; align-items: center;">
+                                <i class="fas fa-globe" style="font-size: 16px; width: 20px; color: burlywood"></i>
+                                <span style="margin-left: 10px;"><a
                                         href="https://korearchinfra.com/">Korearchinfra.com</a></span>
-            </li>
-        </ul>
-    </div>
-</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
             <div class="footer-bottom">
@@ -645,3 +719,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
+
+</html>

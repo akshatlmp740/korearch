@@ -11,6 +11,157 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="./assets/responsive.css">
 </head>
+<style>
+    /* ================ PROJECTS STYLES ================ */
+    :root {
+        --primary: #2c3e50;
+        --accent: #D35400;
+        --light-accent: rgba(211, 84, 0, 0.1);
+        --text: #555;
+        --light-text: #777;
+        --light-bg: #f9f9f9;
+        --white: #fff;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+        --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --border-radius: 8px;
+    }
+
+    .projects-header {
+        text-align: center;
+        margin-bottom: 50px;
+        padding-top: 22px;
+    }
+
+    .projects-header h1 {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+    }
+
+    .projects-header p {
+        color: var(--text);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        background: var(--white);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+        position: relative;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .project-image {
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 5s ease;
+    }
+
+    .project-card:hover .project-image img {
+        transform: scale(1.1);
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        color: var(--primary);
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+    }
+
+    .project-info p {
+        color: var(--text);
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    .project-meta {
+        display: flex;
+        justify-content: space-between;
+        color: var(--light-text);
+        font-size: 0.9rem;
+    }
+
+    .project-status {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--accent);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    .project-tag {
+        background: var(--light-accent);
+        color: var(--accent);
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+        .projects-container {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+        
+        .projects-header h1 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .projects-container {
+            grid-template-columns: 1fr;
+        }
+    }
+    .projects-header h1{
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        text-decoration-color: #D35400;
+    }
+    .projects-header h2{
+        text-decoration: underline;
+        text-underline-offset: 8px;
+    }
+</style>
 
 <body>
     <a href="#" class="tel_a" style="right: 21px; bottom: 105px; background-color: #da8953;" target="_blank"
@@ -55,7 +206,7 @@
                                     Completed</a></li>
                             <li><a href="GoingProject.html" class="dropdown-link"><i class="fas fa-tasks"></i>
                                     Ongoing</a></li>
-                                    <li><a href="all-projects.html" class="dropdown-link"><i class="fas fa-th-list"></i>
+                            <li><a href="all-projects.html" class="dropdown-link"><i class="fas fa-th-list"></i>
                                     All Projects</a></li>
                         </ul>
                     </li>
@@ -85,7 +236,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-nav-list">
-            <li><a href="./index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="./index.html" class="mobile-nav-link active">Home</a></li>
             <li><a href="./AboutUs.html" class="mobile-nav-link">About Us</a></li>
             <li class="mobile-dropdown-container">
                 <a href="#" class="mobile-nav-link mobile-dropdown-toggle">Services <span
@@ -112,23 +263,20 @@
             </li>
             <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-dropdown-container">
-                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
-                <ul class="dropdown-menu">
-                            <li><a href="./careers.html" class="dropdown-link"><i class="fas fa-briefcase"></i>
-                                    Careers</a></li>
-                            <li><a href="./certification.html" class="dropdown-link"><i class="fas fa-globe"></i>
-                                    Certification</a></li>
-                            <li><a href="./vendor.html" class="dropdown-link"><i class="fas fa-user-plus"></i>
-                                    Vendor Registration</a></li>
-                        </ul>
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span
+                        class="dropdown-icon">▼</span></a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="careers.html" class="mobile-dropdown-link">Career</a></li>
+                    <li><a href="certification.html" class="mobile-dropdown-link">Certification</a></li>
+                    <li><a href="vendor.html" class="mobile-dropdown-link">Vendor Registration</a></li>
+                </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link contact-btn"
                     style="display: inline-block; margin-top: 15px;">Get a Quote</a></li>
         </ul>
     </div>
 
-
-    <div id="pageheader">
+     <div id="pageheader">
         <img id="pageheader-image"
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
             alt="Premium Modular Villas,Pods and Farmhouses">
@@ -145,469 +293,919 @@
     </div>
 
 
-<style>
-    #gallery{
-        padding-bottom: 50px;
-    }
-    /* Gallery Section */
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .gallery-item {
-        position: relative;
-        border-radius: 8px;
-        overflow: hidden;
-        height: 250px;
-        cursor: pointer;
-    }
-
-    .gallery-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    .gallery-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-        color: white;
-        padding: 1.5rem;
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-    }
-
-    .gallery-overlay h3 {
-        margin-bottom: 0.5rem;
-        color: white;
-    }
-
-    .gallery-overlay p {
-        color: #f5f5f5;
-        margin-bottom: 0;
-    }
-
-    /* Hover Effects */
-    .gallery-item:hover .gallery-overlay {
-        transform: translateY(0);
-    }
-
-    .gallery-item:hover .gallery-img {
-        transform: scale(1.05);
-    }
-</style>
 
 
+<div class="projects-header">
+    <h1>Green Buildings Projects</h1>
+    <h2>Light Gauge Steel Frame Structure</h2>
+</div>
 
-<!-- Gallery Section -->
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Green Buildings Projects</h2>
-            <h1>Light Gauge Steel Frame Structure</h1>
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/st1.jpeg">
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Studio 1</h3>
+            <p style="font-weight: bold; color: black;">Tata Steel (sub client-Tata Nestin)</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-12500</span>
+                <span>Naumandi, India</span>
             </div>
         </div>
     </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Hot Rolled Steel</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Hybrid Structures</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Drywall Systems</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Premium Modular Villas, Pods and Farmhouses</h2>
-            <h1>Premium Modular Structure</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Civil Construction</h2>
-            <h1>Residential Construction</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Commercial Construction</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Institutional Construction</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Mixed-Use Developments</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Interior and Exterior</h2>
-            <h1>Interior Projects</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h1>Exterior Projects</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="gallery" class="gallery section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our General Contracting Solutions</h2>
-            <h1>General Contracting</h1>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 1" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Commercial Complex</h3>
-                    <p>Downtown Business Center</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                    alt="Project 2" class="gallery-img">
-                <div class="gallery-overlay">
-                    <h3>Residential Development</h3>
-                    <p>Hillside Villas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/st2.jpg" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Studio 2</h3>
+            <p style="font-weight: bold; color: black;">Tata Steel (sub client-Tata Nestin)</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-10900</span>
+                <span>Naumandi, India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/60.jpeg" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>60 Pax Canteen</h3>
+            <p style="font-weight: bold; color: black;">Tata Steel (sub client-Tata Nestin)</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-1500</span>
+                <span>Sanand Gujrat, India</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/bh.jpg">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Bachelor Block</h3>
+            <p style="font-weight: bold; color: black;">Tata Nestin</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-13600</span>
+                <span>Naumandi Jharkhand,<br> India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/agn.png">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Aganwadi</h3>
+            <p style="font-weight: bold; color: black;">Tata Nestin</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-600</span>
+                <span>Madikeri, India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/ab.jpeg">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Accommodation Block (JSW)
+            </h3>
+            <p style="font-weight: bold; color: black;">JSW</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-60000</span>
+                <span>Township Torangallu <br> vellari, India</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/kol.png">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>ISBM Kolkata</h3>
+            <p style="font-weight: bold; color: black;">VGS</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-24000</span>
+                <span>Kolkata, India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/bir.png">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Birla Globaluni</h3>
+            <p  style="font-weight: bold; color: black;">VGS</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-10900</span>
+                <span>Odisha, India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <!-- <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>60 Pax Canteen</h3>
+            <p style="font-weight: bold; color: black;">Tata Steel (sub client-Tata Nestin)</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-1500</span>
+                <span>Sanand Gujrat, India</span>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="projects-header">
+    <h2>Hybrid Structures</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <!-- <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Canteen Building</h3>
+            <p style="font-weight: bold; color: black;">SMS Group (sub client-Tata Nestin)</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-24000</span>
+                <span>SMS Khurda Odisha, India</span>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>TSF Office</h3>
+            <p style="font-weight: bold; color: black;">Tata Steel (sub client-Tata Nestin)</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-8400</span>
+                <span>West Bokaro Jharkhand, India</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/gym.jpeg">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>GYM</h3>
+            <p style="font-weight: bold; color: black;">Forest Department (sub client-Tata Nestin)</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-9000</span>
+                <span>Champua, India</span>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Auditorium</h3>
+            <p style="font-weight: bold; color: black;">Tata Nestin</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-6000</span>
+                <span>Champua, India</span>
+            </div>
+        </div>
+    </div> -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/gu.png">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Pcblmundry Gujraat canteen</h3>
+            <p style="font-weight: bold; color: black;">VGS</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <span>Area(Sqft)-11000</span>
+                <span>Mundra, India</span>
+            </div>
+        </div>
+    </div>
+    <div class="project-card">
+        <div class="project-image">
+            <img src="images/bi.jpg">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Bimtech</h3>
+            <p style="font-weight: bold; color: black;">VGS</p>
+            <div class="project-meta" style="font-weight: bold; color: black;">
+                <!-- <span>Area(Sqft)-11000</span> -->
+                <span>Hyderabad, India</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h2>Hot Rolled Steel</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h2>Drywall Systems</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h1>Premium Modular Villas,Pods and Farmhouses</h1>
+    <h2>Premium Modular Structure</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h1>Civil Construction</h1>
+    <h2>Residential Construction</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h2>Commercial Construction</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h2>Institutional Construction</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h2>Mixed-Use Developments</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h1>Interior and Exterior</h1>
+    <h2>Interior Projects</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h2>Exterior Projects</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="projects-header">
+    <h1>Our General Contracting Solutions</h1>
+    <h2>General Contracting</h2>
+</div>
+
+<div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Eco Office Complex">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Eco Office Complex</h3>
+            <p>A sustainable office building featuring solar panels, rainwater harvesting, and energy-efficient lighting systems.</p>
+            <div class="project-meta">
+                <span>Jan 2022 - Dec 2022</span>
+                <span>Bangalore, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Commercial</span>
+                <span class="project-tag">Steel Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Residential Towers">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Green Residential Towers</h3>
+            <p>Twin residential towers with vertical gardens, natural ventilation systems, and waste recycling facilities.</p>
+            <div class="project-meta">
+                <span>Mar 2021 - Nov 2022</span>
+                <span>Mumbai, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Residential</span>
+                <span class="project-tag">Hybrid Structure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sustainable School Campus">
+        </div>
+        <span class="project-status">Completed</span>
+        <div class="project-info">
+            <h3>Sustainable School Campus</h3>
+            <p>An educational facility built with recycled materials, featuring natural lighting and green rooftops.</p>
+            <div class="project-meta">
+                <span>Aug 2020 - Jun 2021</span>
+                <span>Hyderabad, India</span>
+            </div>
+            <div class="project-tags">
+                <span class="project-tag">Institutional</span>
+                <span class="project-tag">Light Gauge Steel</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -619,8 +1217,8 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="logo">
-  <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
-</div><br><br>
+  <img src="images/logo2.png" alt="Korearch Logo" style="max-width: 200px;">
+</div><br>
 
                     <p> Your trusted partner in delivering excellence for medium
                         and large-scale projects involving steel and concrete
