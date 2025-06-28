@@ -87,6 +87,29 @@
             opacity: 1;
             transform: translateX(0);
         }
+        /* Desktop View (default) */
+.div-welcome-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Phone View Fix */
+@media (max-width: 768px) {
+  .div-welcome-content {
+    flex-direction: column; /* Stack vertically */
+  }
+
+  .welcome-heading-only {
+    order: -1; /* Heading ko upar laao */
+  }
+
+  .welcome-full-text {
+    order: 1;
+  }
+}
+
     </style>
 </head>
 
@@ -491,6 +514,13 @@
             <div class="welcome-content div-welcome-content">
 
                 <!-- Left side: Heading -->
+                <div class="welcome-heading-only animate-slide" data-animate>
+                    <h1 class="h1-welcome">
+                        Welcome to <span class="highlight">Korearch Infrastructure Pvt Ltd</span>
+                    </h1>
+                </div>
+
+                <!-- Right side: Text -->
                 <div class="welcome-full-text animate-slide" data-animate>
                     <p class="p-intro">
                         Korearch Infrastructure is your trusted partner in delivering excellence for
@@ -510,14 +540,6 @@
                         <span class="highlight">Partner with us and build with confidence.</span>
                     </p>
                 </div>
-
-                <!-- Right side: Text -->
-                <div class="welcome-heading-only animate-slide" data-animate>
-                    <h1 class="h1-welcome">
-                        Welcome to <span class="highlight">Korearch Infrastructure Pvt Ltd</span>
-                    </h1>
-                </div>
-
             </div>
         </div>
     </section>
