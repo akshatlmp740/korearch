@@ -87,29 +87,31 @@
             opacity: 1;
             transform: translateX(0);
         }
+
         /* Desktop View (default) */
-.div-welcome-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
-}
+        .div-welcome-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2rem;
+        }
 
-/* Phone View Fix */
-@media (max-width: 768px) {
-  .div-welcome-content {
-    flex-direction: column; /* Stack vertically */
-  }
+        /* Phone View Fix */
+        @media (max-width: 768px) {
+            .div-welcome-content {
+                flex-direction: column;
+                /* Stack vertically */
+            }
 
-  .welcome-heading-only {
-    order: -1; /* Heading ko upar laao */
-  }
+            .welcome-heading-only {
+                order: -1;
+                /* Heading ko upar laao */
+            }
 
-  .welcome-full-text {
-    order: 1;
-  }
-}
-
+            .welcome-full-text {
+                order: 1;
+            }
+        }
     </style>
 </head>
 
@@ -125,9 +127,13 @@
     <!-- Header with Navigation -->
     <header class="header" id="header">
         <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
-            </div>
+            <button onclick="window.location.href='index.html'"
+                style="border: none; background: none; padding: 0; cursor: pointer;">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Korearch Logo" style="max-width: 200px;">
+                </div>
+            </button>
+
 
             <nav class="nav">
                 <ul class="nav-list">
@@ -208,13 +214,12 @@
                 <ul class="mobile-dropdown-menu">
                     <li><a href="CompleteProject.html" class="mobile-dropdown-link">Completed Projects</a></li>
                     <li><a href="GoingProject.html" class="mobile-dropdown-link">Ongoing Projects</a></li>
-                     <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
+                    <li><a href="all-projects.html" class="mobile-dropdown-link">All Projects</a></li>
                 </ul>
             </li>
             <li><a href="./contact.html" class="mobile-nav-link">Contact</a></li>
             <li class="mobile-dropdown-container">
-                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span
-                        class="dropdown-icon">▼</span></a>
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">More <span class="dropdown-icon">▼</span></a>
                 <ul class="mobile-dropdown-menu">
                     <li><a href="careers.html" class="mobile-dropdown-link">Career</a></li>
                     <li><a href="certification.html" class="mobile-dropdown-link">Certification</a></li>
@@ -272,8 +277,8 @@
                         tomorrow. Choose sustainability—choose Green Building!
                     </p>
                     <div class="hero-buttons">
-                        <a href="premium-modular-villas-pods-and-farmhouses.html" class="btn btn-primary">Learn More</a>
-                        <a href="AboutUs.html" class="btn btn-secondary">Our Approach</a>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                        <a href="green-buildings.html" class="btn btn-secondary">Our Services</a>
                     </div>
                 </div>
                 <div class="hero-content">
@@ -282,8 +287,8 @@
                         From concept to completion, we deliver durable, innovative, and reliable solutions.
                         Build with confidence!</p>
                     <div class="hero-buttons">
-                        <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                        <a href="civil-construction.html" class="btn btn-secondary">Our Projects</a>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                        <a href="green-buildings.html" class="btn btn-secondary">Our Services</a>
                     </div>
                 </div>
                 <div class="hero-content">
@@ -292,8 +297,8 @@
                         tomorrow. Choose sustainability—choose Green Building!
                     </p>
                     <div class="hero-buttons">
-                        <a href="interior-and-exterior.html" class="btn btn-primary">Learn More</a>
-                        <a href="AboutUs.html" class="btn btn-secondary">Our Approach</a>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                        <a href="green-buildings.html" class="btn btn-secondary">Our Services</a>
                     </div>
                 </div>
                 <div class="hero-content">
@@ -302,8 +307,8 @@
                         tomorrow. Choose sustainability—choose Green Building!
                     </p>
                     <div class="hero-buttons">
-                        <a href="general-contracting-for-all-segments.html" class="btn btn-primary">Learn More</a>
-                        <a href="AboutUs.html" class="btn btn-secondary">Our Approach</a>
+                        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+                        <a href="green-buildings.html" class="btn btn-secondary">Our Services</a>
                     </div>
                 </div>
             </div>
@@ -344,7 +349,7 @@
                                 <img src="./images/2.jpg" alt="Road Works"
                                     style="width:100%;height:100%;object-fit:cover;">
                             </div>
-                            <h3>Modular villas, Pods and Farm Houses</h3>
+                            <h3>Modular villas, Pods and Farmhouses</h3>
                             <p>Experience modern comfort with modular villas, eco pods, and farm retreats — sustainable,
                                 stylish, and built for future living.</p>
                             <a href="premium-modular-villas-pods-and-farmhouses.html" class="btn btn-secondary">View
@@ -523,22 +528,21 @@
                 <!-- Right side: Text -->
                 <div class="welcome-full-text animate-slide" data-animate>
                     <p class="p-intro">
-                        Korearch Infrastructure is your trusted partner in delivering excellence for
-                        medium and large-scale projects across industrial, commercial, and residential sectors.
-                        We specialize in steel structures, civil works, premium villas, and modular pods,
-                        ensuring precision, durability, and innovation in every build.
+                        Korearch Infrastructure is your reliable partner for exceptional medium and large-scale
+                        projects. We excel in industrial, commercial, residential construction, specializing in
+                        steel structures, civil works, premium villas, modular pods. Our expertise covers hybrid
+                        steel, LGSF, and turnkey solutions, ensuring precision, durability, and innovation. From
+                        substructure to façade and roofing, we deliver end-to-end solutions with a commitment to
+                        sustainability, on-time delivery, and future-ready infrastructure. Build with confidence; we
+                        transform your vision into reality. <br><span class="highlight">Partner with us and build with
+                            confidence.</span>
                     </p>
-                    <p class="p-expertise">
-                        Our expertise spans hybrid steel structures, light gauge steel framing (LGSF),
-                        and turnkey developments, integrating cutting-edge engineering with superior craftsmanship.
-                        From substructure-civil work to fabrication, PEB (Pre-Engineered Buildings),
-                        façade, and roofing, we offer end-to-end solutions that redefine quality and efficiency.
-                    </p>
-                    <p class="p-commitment">
+
+                    <!-- <p class="p-commitment">
                         With a commitment to sustainability, on-time delivery, and future-ready infrastructure,
                         we transform visions into reality.
-                        <span class="highlight">Partner with us and build with confidence.</span>
-                    </p>
+                        
+                    </p> -->
                 </div>
             </div>
         </div>
@@ -793,6 +797,72 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <div id="testimonial-card">
+                                <div id="client-info">
+                                    <div id="client-avatar">A</div>
+                                    <div id="client-details">
+                                        <h3 id="client-name">Ankur Das</h3>
+                                        <p id="client-company">Centre for Excellence, U.P. Govt.</p>
+                                        <div id="rating">
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="testimonial-text">
+                                    Their professionalism and ability to adapt to project needs made the entire
+                                    construction process smooth. The final output was beyond expectations!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="testimonial-card">
+                                <div id="client-info">
+                                    <div id="client-avatar">v</div>
+                                    <div id="client-details">
+                                        <h3 id="client-name">Vikash Panday</h3>
+                                        <p id="client-company">K.G. Degree College, U.P. Govt.</p>
+                                        <div id="rating">
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="testimonial-text">
+                                    Their professionalism and ability to adapt to project needs made the entire
+                                    construction process smooth. The final output was beyond expectations!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="testimonial-card">
+                                <div id="client-info">
+                                    <div id="client-avatar">S</div>
+                                    <div id="client-details">
+                                        <h3 id="client-name">Sanjay Chauhan</h3>
+                                        <p id="client-company">J.D.A. College, New Delhi</p>
+                                        <div id="rating">
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">★</span>
+                                            <span id="star">☆</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="testimonial-text">
+                                    Their professionalism and ability to adapt to project needs made the entire
+                                    construction process smooth. The final output was beyond expectations!
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Pagination -->
@@ -815,8 +885,7 @@
                     </div><br>
 
                     <p> Your trusted partner in delivering excellence for medium
-                        and large-scale projects involving steel and concrete
-                        structures.</p>
+                        and large-scale projects.</p>
 
                 </div>
                 <div class="footer-links">
@@ -833,7 +902,8 @@
                     <h4>Services</h4>
                     <ul>
                         <li><a href="green-buildings.html">Green Buildings</a></li>
-                        <li><a href="premium-modular-villas-pods-and-farmhouses.html">Premium Modular Villas</a></li>
+                        <li><a href="premium-modular-villas-pods-and-farmhouses.html">Premium Villas, Pods <br>&
+                                Farmhouses</a></li>
                         <li><a href="civil-construction.html">Civil Construction</a></li>
                         <li><a href="interior-and-exterior.html">Interior & Exterior</a></li>
                         <li><a href="general-contracting-for-all-segments.html">General Contracting</a></li>
